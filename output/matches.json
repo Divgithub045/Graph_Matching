@@ -1,0 +1,352 @@
+[
+  {
+    "waste_type": "metal_scrap_steel",
+    "waste_category": "metal",
+    "buyer_id": "B064",
+    "buyer_name": "Metro Processors Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Pune, Maharashtra",
+    "buyer_contact_email": "vikram.kumar@metro.in",
+    "buyer_contact_name": "Vikram Kumar",
+    "buyer_phone": "",
+    "match_score": 86.0,
+    "score_breakdown": {
+      "material": 70.0,
+      "quality": 100.0,
+      "volume": 76.4,
+      "distance": 100.0,
+      "compliance": 100.0
+    },
+    "distance_km": 0.0,
+    "economics": {
+      "annual_revenue": 962640.0,
+      "annual_transport_cost": 0.0,
+      "disposal_cost_avoided": 275040.0,
+      "net_annual_benefit": 1237680.0,
+      "price_per_ton": 21000.0,
+      "annual_quantity_tons": 45.8,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 29.8,
+      "landfill_diverted_tons_annual": 45.8,
+      "virgin_material_avoided_tons": 34.4,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "metal_scrap_steel",
+    "waste_category": "metal",
+    "buyer_id": "B007",
+    "buyer_name": "Bharat Processors Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Chennai, Tamil Nadu",
+    "buyer_contact_email": "anjali.patel@bharat.in",
+    "buyer_contact_name": "Anjali Patel",
+    "buyer_phone": "",
+    "match_score": 82.0,
+    "score_breakdown": {
+      "material": 100.0,
+      "quality": 100.0,
+      "volume": 100.0,
+      "distance": 10.0,
+      "compliance": 100.0
+    },
+    "distance_km": 915.0,
+    "economics": {
+      "annual_revenue": 3186.0,
+      "annual_transport_cost": 167778.0,
+      "disposal_cost_avoided": 275040.0,
+      "net_annual_benefit": 110448.0,
+      "price_per_ton": 70.0,
+      "annual_quantity_tons": 45.8,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 19.73,
+      "landfill_diverted_tons_annual": 45.8,
+      "virgin_material_avoided_tons": 34.4,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "metal_scrap_steel",
+    "waste_category": "metal",
+    "buyer_id": "B059",
+    "buyer_name": "Eco Waste Mgmt Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Ahmedabad, Gujarat",
+    "buyer_contact_email": "rohan.verma@eco.in",
+    "buyer_contact_name": "Rohan Verma",
+    "buyer_phone": "",
+    "match_score": 81.5,
+    "score_breakdown": {
+      "material": 100.0,
+      "quality": 100.0,
+      "volume": 76.4,
+      "distance": 25.0,
+      "compliance": 100.0
+    },
+    "distance_km": 517.8,
+    "economics": {
+      "annual_revenue": 550080.0,
+      "annual_transport_cost": 94936.0,
+      "disposal_cost_avoided": 275040.0,
+      "net_annual_benefit": 730184.0,
+      "price_per_ton": 12000,
+      "annual_quantity_tons": 45.8,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 24.1,
+      "landfill_diverted_tons_annual": 45.8,
+      "virgin_material_avoided_tons": 34.4,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "metal_scrap_aluminum",
+    "waste_category": "metal",
+    "buyer_id": "B064",
+    "buyer_name": "Metro Processors Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Pune, Maharashtra",
+    "buyer_contact_email": "vikram.kumar@metro.in",
+    "buyer_contact_name": "Vikram Kumar",
+    "buyer_phone": "",
+    "match_score": 80.8,
+    "score_breakdown": {
+      "material": 70.0,
+      "quality": 100.0,
+      "volume": 42.2,
+      "distance": 100.0,
+      "compliance": 100.0
+    },
+    "distance_km": 0.0,
+    "economics": {
+      "annual_revenue": 531720.0,
+      "annual_transport_cost": 0.0,
+      "disposal_cost_avoided": 151920.0,
+      "net_annual_benefit": 683640.0,
+      "price_per_ton": 21000.0,
+      "annual_quantity_tons": 25.3,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 16.46,
+      "landfill_diverted_tons_annual": 25.3,
+      "virgin_material_avoided_tons": 19.0,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "metal_scrap_steel",
+    "waste_category": "metal",
+    "buyer_id": "B024",
+    "buyer_name": "Hindustan Recycling Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Kolkata, West Bengal",
+    "buyer_contact_email": "vikram.joshi@hindustan.in",
+    "buyer_contact_name": "Vikram Joshi",
+    "buyer_phone": "",
+    "match_score": 78.5,
+    "score_breakdown": {
+      "material": 100.0,
+      "quality": 100.0,
+      "volume": 76.4,
+      "distance": 10.0,
+      "compliance": 100.0
+    },
+    "distance_km": 1575.6,
+    "economics": {
+      "annual_revenue": 504240.0,
+      "annual_transport_cost": 288902.0,
+      "disposal_cost_avoided": 275040.0,
+      "net_annual_benefit": 490378.0,
+      "price_per_ton": 11000.0,
+      "annual_quantity_tons": 45.8,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 12.46,
+      "landfill_diverted_tons_annual": 45.8,
+      "virgin_material_avoided_tons": 34.4,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "metal_scrap_aluminum",
+    "waste_category": "metal",
+    "buyer_id": "B059",
+    "buyer_name": "Eco Waste Mgmt Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Ahmedabad, Gujarat",
+    "buyer_contact_email": "rohan.verma@eco.in",
+    "buyer_contact_name": "Rohan Verma",
+    "buyer_phone": "",
+    "match_score": 76.3,
+    "score_breakdown": {
+      "material": 100.0,
+      "quality": 100.0,
+      "volume": 42.2,
+      "distance": 25.0,
+      "compliance": 100.0
+    },
+    "distance_km": 517.8,
+    "economics": {
+      "annual_revenue": 303840.0,
+      "annual_transport_cost": 52439.0,
+      "disposal_cost_avoided": 151920.0,
+      "net_annual_benefit": 403321.0,
+      "price_per_ton": 12000,
+      "annual_quantity_tons": 25.3,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 13.31,
+      "landfill_diverted_tons_annual": 25.3,
+      "virgin_material_avoided_tons": 19.0,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "metal_scrap_aluminum",
+    "waste_category": "metal",
+    "buyer_id": "B024",
+    "buyer_name": "Hindustan Recycling Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Kolkata, West Bengal",
+    "buyer_contact_email": "vikram.joshi@hindustan.in",
+    "buyer_contact_name": "Vikram Joshi",
+    "buyer_phone": "",
+    "match_score": 73.3,
+    "score_breakdown": {
+      "material": 100.0,
+      "quality": 100.0,
+      "volume": 42.2,
+      "distance": 10.0,
+      "compliance": 100.0
+    },
+    "distance_km": 1575.6,
+    "economics": {
+      "annual_revenue": 278520.0,
+      "annual_transport_cost": 159577.0,
+      "disposal_cost_avoided": 151920.0,
+      "net_annual_benefit": 270863.0,
+      "price_per_ton": 11000.0,
+      "annual_quantity_tons": 25.3,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 6.88,
+      "landfill_diverted_tons_annual": 25.3,
+      "virgin_material_avoided_tons": 19.0,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "paint_sludge",
+    "waste_category": "chemical",
+    "buyer_id": "B039",
+    "buyer_name": "Eco Industries Pvt Ltd",
+    "buyer_type": "Chemical Waste Processor",
+    "buyer_location": "Chennai, Tamil Nadu",
+    "buyer_contact_email": "karthik.singh@eco.in",
+    "buyer_contact_name": "Karthik Singh",
+    "buyer_phone": "",
+    "match_score": 71.5,
+    "score_breakdown": {
+      "material": 100.0,
+      "quality": 100.0,
+      "volume": 30.0,
+      "distance": 10.0,
+      "compliance": 100.0
+    },
+    "distance_km": 915.0,
+    "economics": {
+      "annual_revenue": 730.0,
+      "annual_transport_cost": 34039.0,
+      "disposal_cost_avoided": 55800.0,
+      "net_annual_benefit": 22491.0,
+      "price_per_ton": 78.0,
+      "annual_quantity_tons": 9.3,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 4.0,
+      "landfill_diverted_tons_annual": 9.3,
+      "virgin_material_avoided_tons": 7.0,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "paint_sludge",
+    "waste_category": "chemical",
+    "buyer_id": "B043",
+    "buyer_name": "Re Waste Mgmt Pvt Ltd",
+    "buyer_type": "Chemical Waste Processor",
+    "buyer_location": "Lucknow, Uttar Pradesh",
+    "buyer_contact_email": "priya.verma@re.in",
+    "buyer_contact_name": "Priya Verma",
+    "buyer_phone": "",
+    "match_score": 71.5,
+    "score_breakdown": {
+      "material": 100.0,
+      "quality": 100.0,
+      "volume": 30.0,
+      "distance": 10.0,
+      "compliance": 100.0
+    },
+    "distance_km": 1177.7,
+    "economics": {
+      "annual_revenue": 93000.0,
+      "annual_transport_cost": 43811.0,
+      "disposal_cost_avoided": 55800.0,
+      "net_annual_benefit": 104989.0,
+      "price_per_ton": 10000,
+      "annual_quantity_tons": 9.3,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 3.42,
+      "landfill_diverted_tons_annual": 9.3,
+      "virgin_material_avoided_tons": 7.0,
+      "recycling_efficiency_pct": 75
+    }
+  },
+  {
+    "waste_type": "metal_scrap_aluminum",
+    "waste_category": "metal",
+    "buyer_id": "B007",
+    "buyer_name": "Bharat Processors Pvt Ltd",
+    "buyer_type": "Metal Recycler",
+    "buyer_location": "Chennai, Tamil Nadu",
+    "buyer_contact_email": "anjali.patel@bharat.in",
+    "buyer_contact_name": "Anjali Patel",
+    "buyer_phone": "",
+    "match_score": 71.5,
+    "score_breakdown": {
+      "material": 70.0,
+      "quality": 100.0,
+      "volume": 100.0,
+      "distance": 10.0,
+      "compliance": 100.0
+    },
+    "distance_km": 915.0,
+    "economics": {
+      "annual_revenue": 1760.0,
+      "annual_transport_cost": 92673.0,
+      "disposal_cost_avoided": 151920.0,
+      "net_annual_benefit": 61007.0,
+      "price_per_ton": 70.0,
+      "annual_quantity_tons": 25.3,
+      "currency": "INR"
+    },
+    "environmental": {
+      "co2_saved_tons_annual": 10.9,
+      "landfill_diverted_tons_annual": 25.3,
+      "virgin_material_avoided_tons": 19.0,
+      "recycling_efficiency_pct": 75
+    }
+  }
+]
