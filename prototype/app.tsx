@@ -45,7 +45,8 @@ const WasteCircularPlatform = () => {
     process: '',
     machinery: '',
     scale: '',
-    location: ''
+    location: '',
+    units_per_month: 1000
   });
   const [wasteProfile, setWasteProfile] = useState<WasteProfile | null>(null);
   const [matches, setMatches] = useState<Match[]>([]);
@@ -149,25 +150,163 @@ const WasteCircularPlatform = () => {
     setLoading(false);
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setOperationalData(prev => ({ ...prev, [field]: value }));
+  // Rule-based calculation for units_per_month based on scale
+  const calculateUnitsPerMonth = (scale: string): number => {
+    const scaleMap: Record<string, number> = {
+      'small': 500,
+      'medium': 5000,
+      'large': 50000,
+      'xlarge': 100000
+    };
+    return scaleMap[scale.toLowerCase()] || 1000;
   };
 
-  const handleGenerateProfile = async () => {
-    await inferWasteProfile(operationalData);
-    setStep(2);
+  const handleInputChange = (field: string, value: string) => {
+    setOperationalData(prev => {
+      const updated = { ...prev, [field]: value };
+      
+      // Auto-calculate units_per_month when scale changes
+      if (field === 'scale') {
+        updated.units_per_month = calculateUnitsPerMonth(value);
+      }
+      
+      return updated;
+    });
+  };
+
+  const handlePredictWaste = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/predict-waste', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(operationalData)
+      });
+      const result = await response.json();
+      
+      if (result.success && result.waste_profile) {
+        const waste = result.waste_profile;
+        
+        // Transform backend response to UI format
+        const transformedProfile: WasteProfile = {
+          wasteTypes: waste.waste_streams.map((stream: any) => ({
+            type: stream.type,
+            quantity: `${stream.quantity_min_tons}-${stream.quantity_max_tons} tons/month`,
+            quality: stream.quality_grade,
+            contamination: `${stream.contamination_pct}%`,
+            hazardLevel: stream.hazard_class,
+            composition: { primary: 100 }
+          })),
+          confidence: waste.overall_confidence,
+          regulatoryFlags: waste.waste_streams
+            .filter((s: any) => s.hazard_class === 'Hazardous')
+            .map((s: any) => `${s.type}: Hazardous waste requires special handling and CPCB permits`),
+          location: operationalData.location,
+          industry: operationalData.industry
+        };
+        
+        setWasteProfile(transformedProfile);
+        setStep(2);
+      }
+    } catch (error) {
+      console.error('Error predicting waste:', error);
+      alert('Error predicting waste profile. Check console for details.');
+    }
+    setLoading(false);
   };
 
   const handleFindMatches = async () => {
-    if (wasteProfile) {
-      await findMatches(wasteProfile);
-      setStep(3);
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/find-matches', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(operationalData)
+      });
+      const result = await response.json();
+      
+      if (result.success && result.matches) {
+        // If backend returns raw matches, transform them
+        const processedMatches = result.matches.map((match: any, idx: number) => ({
+          id: match.id || idx + 1,
+          company: match.company || 'Unknown Buyer',
+          type: match.type || 'Waste Buyer',
+          materialMatch: match.materialMatch || 85,
+          qualityFit: match.qualityFit || 80,
+          distance: match.distance || 0,
+          costSaving: match.costSaving || 1000,
+          environmentalImpact: match.environmentalImpact || { co2Saved: 5, landfillDiverted: 10 },
+          compliance: match.compliance || 'Compliant',
+          overallScore: match.overallScore || 80,
+          requirements: match.requirements || 'Standard waste acceptance',
+          pricing: match.pricing || 'Market dependent'
+        }));
+        
+        setMatches(processedMatches);
+        setStep(3);
+      }
+    } catch (error) {
+      console.error('Error finding matches:', error);
+      alert('Error finding matches. Check console for details.');
     }
+    setLoading(false);
   };
 
   const handleSendOutreach = async () => {
-    await sendOutreach();
-    setStep(4);
+    setLoading(true);
+    try {
+      // Save matches to backend
+      const matchResults = matches.map(m => ({
+        id: m.id,
+        company: m.company,
+        type: m.type,
+        materialMatch: m.materialMatch,
+        qualityFit: m.qualityFit,
+        distance: m.distance,
+        costSaving: m.costSaving,
+        environmentalImpact: m.environmentalImpact,
+        compliance: m.compliance,
+        overallScore: m.overallScore
+      }));
+      
+      const saveResponse = await fetch('http://localhost:8000/api/save-matches', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(matchResults)
+      });
+      
+      if (saveResponse.ok) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+        setOutreachSent(true);
+        setStep(4);
+      }
+    } catch (error) {
+      console.error('Error sending outreach:', error);
+      alert('Error saving matches. Check console for details.');
+    }
+    setLoading(false);
+  };
+
+  const handleSaveForm = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/api/save-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          operational_data: operationalData,
+          timestamp: new Date().toISOString()
+        })
+      });
+      
+      if (response.ok) {
+        alert('Form saved successfully!');
+      } else {
+        alert('Error saving form');
+      }
+    } catch (error) {
+      console.error('Error saving form:', error);
+      alert('Error saving form. Check console for details.');
+    }
   };
 
   return (
@@ -213,12 +352,12 @@ const WasteCircularPlatform = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { field: 'industry', label: 'Industry Sector', placeholder: 'e.g., Automotive Manufacturing' },
-                { field: 'product', label: 'Primary Product', placeholder: 'e.g., Engine Components' },
-                { field: 'process', label: 'Manufacturing Process', placeholder: 'e.g., CNC Machining, Assembly' },
-                { field: 'machinery', label: 'Key Machinery', placeholder: 'e.g., Lathes, Milling Machines' },
-                { field: 'scale', label: 'Production Scale', placeholder: 'e.g., 5000 units/month' },
-                { field: 'location', label: 'Facility Location', placeholder: 'e.g., Pune, Maharashtra' }
+                { field: 'industry', label: 'Industry Sector', placeholder: 'e.g., automotive' },
+                { field: 'product', label: 'Primary Product', placeholder: 'e.g., engine_components' },
+                { field: 'process', label: 'Manufacturing Process', placeholder: 'e.g., welding' },
+                { field: 'machinery', label: 'Key Machinery', placeholder: 'e.g., milling_machine' },
+                { field: 'scale', label: 'Production Scale', placeholder: 'small / medium / large / xlarge' },
+                { field: 'location', label: 'Facility Location', placeholder: 'e.g., Delhi' }
               ].map(({ field, label, placeholder }) => (
                 <div key={field}>
                   <label className="block text-sm font-medium mb-2 text-slate-300">{label}</label>
@@ -231,14 +370,48 @@ const WasteCircularPlatform = () => {
                   />
                 </div>
               ))}
+              <div>
+                <label className="block text-sm font-medium mb-2 text-slate-300">
+                  Units Per Month
+                  <span className="text-xs text-slate-400 ml-2">(auto-calculated from scale)</span>
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    type="number"
+                    value={operationalData.units_per_month}
+                    onChange={(e) => setOperationalData(prev => ({ ...prev, units_per_month: parseInt(e.target.value) || 1000 }))}
+                    placeholder="e.g., 1000"
+                    className="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white placeholder-slate-400"
+                  />
+                  <button
+                    onClick={() => setOperationalData(prev => ({ 
+                      ...prev, 
+                      units_per_month: calculateUnitsPerMonth(prev.scale) 
+                    }))}
+                    className="px-3 py-3 bg-slate-600 hover:bg-slate-500 rounded-lg text-sm font-medium transition-all"
+                    title="Reset to auto-calculated value"
+                  >
+                    Reset
+                  </button>
+                </div>
+                <p className="text-xs text-slate-400 mt-1">
+                  {operationalData.scale && `Auto value for ${operationalData.scale}: ${calculateUnitsPerMonth(operationalData.scale).toLocaleString()}`}
+                </p>
+              </div>
             </div>
             <button
-              onClick={handleGenerateProfile}
+              onClick={handlePredictWaste}
               disabled={!operationalData.industry || loading}
               className="mt-8 w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-600 disabled:cursor-not-allowed px-6 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center gap-2"
             >
               {loading ? <Loader className="w-5 h-5 animate-spin" /> : <TrendingUp className="w-5 h-5" />}
               Generate AI Waste Profile
+            </button>
+            <button
+              onClick={handleSaveForm}
+              className="mt-4 w-full bg-slate-600 hover:bg-slate-700 px-6 py-4 rounded-lg font-semibold text-lg transition-all"
+            >
+              Save This Form
             </button>
           </div>
         )}

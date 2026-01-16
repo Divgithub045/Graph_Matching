@@ -363,7 +363,7 @@ class GraphMatcher:
         Find and rank optimal matches using graph algorithms
         
         Returns:
-            List of match dictionaries sorted by score
+            List of match dictionaries sorted by score (frontend-compatible format)
         """
         
         # Get all buyers
@@ -372,8 +372,8 @@ class GraphMatcher:
         # Build graph
         G = self.build_graph(waste_profile, all_buyers)
         
-        # Extract all viable matches
-        matches = []
+        # Extract all viable matches with buyer deduplication
+        buyer_matches = {}  # Key: buyer_id, Value: best match data
         
         for waste_node in [n for n, d in G.nodes(data=True) if d.get('node_type') == 'waste']:
             waste_data = G.nodes[waste_node]['waste_data']
@@ -382,31 +382,33 @@ class GraphMatcher:
             for buyer_node in G.successors(waste_node):
                 edge_data = G.edges[waste_node, buyer_node]
                 buyer_data = G.nodes[buyer_node]['buyer_data']
+                buyer_id = buyer_data['buyer_id']
                 
-                match = {
-                    'waste_type': waste_data['type'],
-                    'waste_category': waste_data['category'],
-                    'buyer_id': buyer_data['buyer_id'],
-                    'buyer_name': buyer_data['company_name'],
-                    'buyer_type': buyer_data['company_type'],
-                    'buyer_location': f"{buyer_data['city']}, {buyer_data['state']}",
-                    'buyer_contact_email': buyer_data['contact_email'],
-                    'buyer_contact_name': buyer_data['contact_name'],
-                    'buyer_phone': buyer_data.get('contact_phone', ''),
-                    'match_score': round(edge_data['total_score'] * 100, 1),
-                    'score_breakdown': {
-                        k: round(v * 100, 1) 
-                        for k, v in edge_data['score_breakdown'].items()
-                    },
-                    'distance_km': edge_data['distance_km'],
-                    'economics': edge_data['economics'],
-                    'environmental': edge_data['environmental']
-                }
+                match_score = edge_data['score_breakdown']['material'] * 100
                 
-                matches.append(match)
+                # If this buyer not seen before, or this match scores higher, update
+                if buyer_id not in buyer_matches or match_score > buyer_matches[buyer_id]['overallScore']:
+                    buyer_matches[buyer_id] = {
+                        'id': int(buyer_id.replace('B', '')),
+                        'company': buyer_data['company_name'],
+                        'type': buyer_data['company_type'],
+                        'materialMatch': round(edge_data['score_breakdown']['material'] * 100, 1),
+                        'qualityFit': round(edge_data['score_breakdown']['quality'] * 100, 1),
+                        'distance': edge_data['distance_km'],
+                        'costSaving': edge_data['economics']['net_annual_benefit'] / 1000,  # Convert to thousands for display
+                        'environmentalImpact': {
+                            'co2Saved': edge_data['environmental']['co2_saved_tons_annual'],
+                            'landfillDiverted': edge_data['environmental']['landfill_diverted_tons_annual']
+                        },
+                        'compliance': 'Compliant' if edge_data['score_breakdown']['compliance'] > 0.5 else 'Review Required',
+                        'overallScore': round(edge_data['total_score'] * 100, 1),
+                        'requirements': f"Min {buyer_data.get('min_monthly_volume_tons', 'N/A')} tons/month",
+                        'pricing': buyer_data.get('pricing_model', 'Market dependent')
+                    }
         
-        # Sort by match score (descending)
-        matches.sort(key=lambda x: x['match_score'], reverse=True)
+        # Convert to list and sort by overall score (descending)
+        matches = list(buyer_matches.values())
+        matches.sort(key=lambda x: x['overallScore'], reverse=True)
         
         return matches[:max_matches]
     

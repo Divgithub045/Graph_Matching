@@ -117,12 +117,19 @@ class WastePredictor:
     def _encode_features(self, facility_input):
         """Convert input dict to encoded feature vector"""
         
+        # Normalize categorical inputs to lowercase
+        industry = facility_input['industry'].lower()
+        product = facility_input['product'].lower()
+        process = facility_input['process'].lower()
+        machinery = facility_input['machinery'].lower()
+        scale = facility_input['scale'].lower()
+        
         # Encode categorical
-        industry_enc = self.encoders['industry'].transform([facility_input['industry']])[0]
-        product_enc = self.encoders['product'].transform([facility_input['product']])[0]
-        process_enc = self.encoders['process'].transform([facility_input['process']])[0]
-        machinery_enc = self.encoders['machinery'].transform([facility_input['machinery']])[0]
-        scale_enc = self.encoders['scale'].transform([facility_input['scale']])[0]
+        industry_enc = self.encoders['industry'].transform([industry])[0]
+        product_enc = self.encoders['product'].transform([product])[0]
+        process_enc = self.encoders['process'].transform([process])[0]
+        machinery_enc = self.encoders['machinery'].transform([machinery])[0]
+        scale_enc = self.encoders['scale'].transform([scale])[0]
         
         # Scale units
         units_scaled = self.encoders['scaler'].transform([[facility_input['units_per_month']]])[0][0]

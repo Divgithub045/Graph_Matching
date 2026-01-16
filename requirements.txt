@@ -2,3 +2,9 @@ numpy
 pandas
 networkx 
 matplotlib
+fastapi
+uvicorn
+xgboost
+scikit-learn
+pydantic
+python-multipart
