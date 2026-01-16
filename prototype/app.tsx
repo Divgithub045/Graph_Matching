@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Trash2, Factory, TrendingUp, Mail, AlertTriangle, CheckCircle, Loader } from 'lucide-react';
+import { Trash2, Factory, TrendingUp, Mail, AlertTriangle, CheckCircle, Loader, Menu, X, Plus, Users, Phone } from 'lucide-react';
 import { INDUSTRIES, LOCATIONS, SCALES } from './data';
 import { RefreshCw,Sprout,Recycle,Handshake} from 'lucide-react';
+import AddBuyer from './AddBuyer';
 
 
 interface WasteType {
@@ -42,6 +43,8 @@ interface Match {
 const WasteCircularPlatform = () => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState<'home' | 'add-buyer'>('home');
   const [operationalData, setOperationalData] = useState({
     industry: '',
     product: '',
@@ -319,6 +322,11 @@ const WasteCircularPlatform = () => {
     }
   };
 
+  // Conditional routing for Add Buyer page
+  if (currentPage === 'add-buyer') {
+    return <AddBuyer onBack={() => setCurrentPage('home')} />;
+  }
+
   return (
   <div
   className="
@@ -332,7 +340,91 @@ const WasteCircularPlatform = () => {
     to-slate-950
   "
 >
+      {/* Collapsible Sidebar */}
+      <div className={`fixed top-0 left-0 h-full bg-slate-900 border-r border-slate-700 z-50 transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`} style={{ width: '280px' }}>
+        <div className="p-6">
+          {/* Close Button */}
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+          >
+            <X className="w-6 h-6" />
+          </button>
 
+          {/* Logo/Title */}
+          <div className="flex items-center gap-2 mb-8 mt-2">
+            <RefreshCw className="w-8 h-8 text-teal-500" />
+            <h2 className="text-xl font-bold">ReLoop</h2>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="space-y-4">
+            {/* Add New Buyer */}
+            <button
+              onClick={() => {
+                setSidebarOpen(false);
+                setCurrentPage('add-buyer');
+              }}
+              className="flex items-center gap-3 p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all border border-slate-700 hover:border-teal-500 w-full text-left"
+            >
+              <Plus className="w-5 h-5 text-teal-400" />
+              <div>
+                <div className="font-semibold text-sm">Buyer Registration</div>
+                <div className="text-xs text-slate-400">Welcome to Reloop</div>
+              </div>
+            </button>
+
+            {/* Meet the Team */}
+            <a
+              href="#team"
+              className="flex items-center gap-3 p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all border border-slate-700 hover:border-teal-500"
+            >
+              <Users className="w-5 h-5 text-teal-400" />
+              <div>
+                <div className="font-semibold text-sm">Meet the Team</div>
+                <div className="text-xs text-slate-400">Know who we are</div>
+              </div>
+            </a>
+
+            {/* Contact Us */}
+            <a
+              href="#contact"
+              className="flex items-center gap-3 p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all border border-slate-700 hover:border-teal-500"
+            >
+              <Phone className="w-5 h-5 text-teal-400" />
+              <div>
+                <div className="font-semibold text-sm">Contact Us</div>
+                <div className="text-xs text-slate-400">Get in touch</div>
+              </div>
+            </a>
+          </nav>
+
+          {/* Footer Info */}
+          <div className="absolute bottom-6 left-6 right-6">
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <p className="text-xs text-slate-400 mb-2">Need help?</p>
+              <p className="text-sm font-semibold text-teal-400">support@reloop.in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      {/* Menu Toggle Button */}
+      <button
+        onClick={() => setSidebarOpen(true)}
+        className="fixed top-6 left-6 z-30 bg-slate-800 hover:bg-slate-700 p-3 rounded-lg border border-slate-700 hover:border-teal-500 transition-all shadow-lg"
+        title="Open Menu"
+      >
+        <Menu className="w-6 h-6 text-teal-400" />
+      </button>
 
       <div className="max-w-7xl mx-auto flex-1 w-full">
         {/* Header - Always visible */}
@@ -413,20 +505,35 @@ const WasteCircularPlatform = () => {
             <aside className="hidden lg:block w-64 flex-shrink-0">
               <div className="sticky top-6 space-y-4">
                 <div className="bg-slate-800 rounded-lg p-4 border-l-4 border-teal-500 hover:scale-105 transition-transform">
-                  <div className="text-2xl font-bold text-teal-400 mb-1">2.4K+</div>
+                  <div className="text-2xl font-bold text-teal-400 mb-1">0.00+</div>
                   <div className="text-xs text-slate-300">Tons Waste Diverted</div>
                 </div>
                 <div className="bg-slate-800 rounded-lg p-4 border-l-4 border-blue-500 hover:scale-105 transition-transform">
-                  <div className="text-2xl font-bold text-blue-400 mb-1">8.50K+</div>
+                  <div className="text-2xl font-bold text-blue-400 mb-1">0.00K+</div>
                   <div className="text-xs text-slate-300">Tons CO₂ Reduced</div>
                 </div>
                 <div className="bg-slate-800 rounded-lg p-4 border-l-4 border-purple-500 hover:scale-105 transition-transform">
-                  <div className="text-2xl font-bold text-purple-400 mb-1">120+</div>
+                  <div className="text-2xl font-bold text-purple-400 mb-1">100+</div>
                   <div className="text-xs text-slate-300">Active Partnerships</div>
                 </div>
                 <div className="bg-slate-800 rounded-lg p-4 border-l-4 border-yellow-500 hover:scale-105 transition-transform">
-                  <div className="text-2xl font-bold text-yellow-400 mb-1">₹4.50Cr+</div>
+                  <div className="text-2xl font-bold text-yellow-400 mb-1">₹0.00Cr+</div>
                   <div className="text-xs text-slate-300">Value Unlocked</div>
+                </div>
+
+                {/* Platform Impact */}
+                <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                  <h4 className="font-bold text-sm mb-3 text-teal-400">Platform Impact</h4>
+                  <div className="space-y-3 text-xs">
+                    <div>
+                      <div className="text-slate-400">Avg Match Score</div>
+                      <div className="text-lg font-bold text-white">89%</div>
+                    </div>
+                    <div>
+                      <div className="text-slate-400">Success Rate</div>
+                      <div className="text-lg font-bold text-white">94%</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </aside>
@@ -568,12 +675,12 @@ const WasteCircularPlatform = () => {
                   {loading ? <Loader className="w-5 h-5 animate-spin" /> : <TrendingUp className="w-5 h-5" />}
                   Generate AI Waste Profile
                 </button>
-                <button
+                {/* <button
                   onClick={handleSaveForm}
                   className="mt-4 w-full bg-slate-600 hover:bg-slate-700 px-6 py-4 rounded-lg font-semibold text-lg transition-all"
                 >
                   Save This Form
-                </button>
+                </button> */}
               </div>
             </div>
 
@@ -590,22 +697,48 @@ const WasteCircularPlatform = () => {
   </p>
 </div>
 
-
-                {/* Quick Stats */}
+                {/* Features We Support */}
                 <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-                  <h4 className="font-bold text-sm mb-3 text-teal-400">Platform Impact</h4>
-                  <div className="space-y-3 text-xs">
-                    <div>
-                      <div className="text-slate-400">Avg Match Score</div>
-                      <div className="text-lg font-bold text-white">89%</div>
+                  <h4 className="font-bold text-sm mb-3 text-teal-400">Features We Support</h4>
+                  <div className="space-y-2 text-xs text-slate-300">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500 mt-0.5 flex-shrink-0" />
+                      <span>AI-Powered Waste Profiling</span>
                     </div>
-                    {/* <div>
-                      <div className="text-slate-400">Response Time</div>
-                      <div className="text-lg font-bold text-white">&lt;2 hrs</div>
-                    </div> */}
-                    <div>
-                      <div className="text-slate-400">Success Rate</div>
-                      <div className="text-lg font-bold text-white">94%</div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500 mt-0.5 flex-shrink-0" />
+                      <span>Smart Buyer Matching</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500 mt-0.5 flex-shrink-0" />
+                      <span>MCP Based Negotiation Agent</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500 mt-0.5 flex-shrink-0" />
+                      <span>Environmental Impact Analytics</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500 mt-0.5 flex-shrink-0" />
+                      <span>Multi-Industry Coverage</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Our Future Plan */}
+                <div className="bg-gradient-to-br from-teal-900/40 to-slate-800 rounded-lg p-4 border border-teal-500/30">
+                  <h4 className="font-bold text-sm mb-3 text-teal-400">Our Future Plan</h4>
+                  <div className="space-y-2 text-xs text-slate-300">
+                    <div className="flex items-start gap-2">
+                      <TrendingUp className="w-3.5 h-3.5 text-teal-400 mt-0.5 flex-shrink-0" />
+                      <span>Integration in pre-built supply chain softwares of industries</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <TrendingUp className="w-3.5 h-3.5 text-teal-400 mt-0.5 flex-shrink-0" />
+                      <span>Pan-India Waste Exchange Network</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <TrendingUp className="w-3.5 h-3.5 text-teal-400 mt-0.5 flex-shrink-0" />
+                      <span>Continual learning and AI model refinement</span>
                     </div>
                   </div>
                 </div>
@@ -828,37 +961,51 @@ const WasteCircularPlatform = () => {
           </div>
         )}
 
-        {/* Footer - Now properly positioned */}
-        <footer className="mt-auto pt-8 border-t border-slate-700 text-center text-slate-400 max-w-7xl mx-auto w-full">
-          <div className="mb-6">
-            <h4 className="text-lg font-bold text-teal-400 mb-2">Our Mission</h4>
-            <p className="text-sm max-w-2xl mx-auto">
-              Accelerating India's transition to a circular economy by making industrial waste management 
-              intelligent, profitable, and sustainable. Every connection we facilitate is a step towards 
-              zero-waste manufacturing.
-            </p>
-          </div>
-         <div className="flex justify-center gap-6 text-sm mb-4">
-  <span className="flex items-center gap-1.5">
-    <Sprout className="w-3.5 h-3.5 text-teal-500" />
-    <span>Carbon Neutral Platform</span>
-  </span>
+       {/* Footer - Now properly positioned */}
+<footer className="mt-auto pt-8 border-t border-slate-700 text-center text-slate-400 max-w-7xl mx-auto w-full">
 
-  <span className="flex items-center gap-1.5">
-    <Recycle className="w-3.5 h-3.5 text-teal-500" />
-    <span>500+ Tons Diverted</span>
- 
-  </span>
+  {/* Logo */}
+  <div className="flex justify-center mb-4">
+    <img
+      src="/assets/flag.png"
+      alt="Circular Economy Platform Logo"
+      className="h-10 w-auto opacity-90"
+    />
+  </div>
 
-  <span className="flex items-center gap-1.5">
-    <Handshake className="w-3.5 h-3.5 text-teal-500" />
-    <span>120+ Active Partners</span> 
-  </span>
-</div>
+  {/* Mission */}
+  <div className="mb-6">
+    <h4 className="text-lg font-bold text-teal-400 mb-2">Our Mission</h4>
+    <p className="text-sm max-w-2xl mx-auto">
+      Accelerating India's transition to a circular economy by making industrial waste management
+      intelligent, profitable, and sustainable. Every connection we facilitate is a step towards
+      zero-waste manufacturing.
+    </p>
+  </div>
 
-          <p className="text-xs">© 2026 Circular Economy Platform. Powering sustainable industry.</p>
-          <p className="text-xs">© CodeCraft Technologies.</p>
-        </footer>
+  {/* Metrics */}
+  <div className="flex justify-center gap-6 text-sm mb-4">
+    <span className="flex items-center gap-1.5">
+      <Sprout className="w-3.5 h-3.5 text-teal-500" />
+      <span>Carbon Neutral Platform</span>
+    </span>
+
+    <span className="flex items-center gap-1.5">
+      <Recycle className="w-3.5 h-3.5 text-teal-500" />
+      <span>000+ Tons Diverted</span>
+    </span>
+
+    <span className="flex items-center gap-1.5">
+      <Handshake className="w-3.5 h-3.5 text-teal-500" />
+      <span>120+ Active Partners</span>
+    </span>
+  </div>
+
+  {/* Footer Text */}
+  <p className="text-xs">© 2026 Circular Economy Platform. Powering sustainable industry.</p>
+  <p className="text-xs">© CodeCraft Technologies.</p>
+</footer>
+
       </div>
     </div>
   );

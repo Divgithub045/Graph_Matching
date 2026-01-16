@@ -239,6 +239,64 @@ async def get_submissions():
         logger.error(f"Error in get_submissions: {str(e)}", exc_info=True)
         raise HTTPException(status_code=400, detail=str(e))
 
+@app.post("/api/add-buyer")
+async def add_buyer(buyer_data: dict):
+    """
+    Add a new buyer to the CSV database
+    """
+    try:
+        import csv
+        import pandas as pd
+        
+        csv_path = r".\data\waste_buyers_india_updated_cities.csv"
+        
+        # Read existing CSV to get the last buyer_id
+        df = pd.read_csv(csv_path)
+        
+        # Generate new buyer_id
+        if len(df) > 0:
+            last_id = df['buyer_id'].iloc[-1]  # e.g., "B103"
+            id_number = int(last_id[1:]) + 1  # Extract number and increment
+            new_buyer_id = f"B{id_number:03d}"  # Format with zero-padding
+        else:
+            new_buyer_id = "B001"
+        
+        # Prepare new row with all required fields
+        new_row = {
+            'buyer_id': new_buyer_id,
+            'company_name': buyer_data.get('company_name', ''),
+            'company_type': buyer_data.get('company_type', ''),
+            'accepted_waste_types': buyer_data.get('accepted_waste_types', ''),
+            'accepted_categories': buyer_data.get('accepted_categories', ''),
+            'min_quality_grade': buyer_data.get('min_quality_grade', ''),
+            'min_monthly_volume_tons': buyer_data.get('min_monthly_volume_tons', 0),
+            'max_monthly_volume_tons': buyer_data.get('max_monthly_volume_tons', 0),
+            'city': buyer_data.get('city', ''),
+            'state': buyer_data.get('state', ''),
+            'lat': buyer_data.get('lat', 0.0),
+            'lng': buyer_data.get('lng', 0.0),
+            'pricing_model': buyer_data.get('pricing_model', ''),
+            'certifications': buyer_data.get('certifications', ''),
+            'contact_email': buyer_data.get('contact_email', ''),
+            'contact_name': buyer_data.get('contact_name', '')
+        }
+        
+        # Append to CSV
+        new_df = pd.DataFrame([new_row])
+        new_df.to_csv(csv_path, mode='a', header=False, index=False)
+        
+        logger.info(f"Successfully added new buyer: {new_buyer_id}")
+        
+        return {
+            "success": True,
+            "message": f"Buyer {new_buyer_id} added successfully",
+            "buyer_id": new_buyer_id
+        }
+    
+    except Exception as e:
+        logger.error(f"Error in add_buyer: {str(e)}", exc_info=True)
+        raise HTTPException(status_code=400, detail=str(e))
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
