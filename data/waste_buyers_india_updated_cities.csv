@@ -1,101 +1,101 @@
 buyer_id,company_name,company_type,accepted_waste_types,accepted_categories,min_quality_grade,min_monthly_volume_tons,max_monthly_volume_tons,city,state,lat,lng,pricing_model,certifications,contact_email,contact_name
-B001,Green Solutions Pvt Ltd,Hazardous Waste Facility,chemical_residue,hazardous,Grade B,1,201,Ahmedabad,Gujarat,23.02,72.57,Market_Rate,"SPCB_Auth,CPCB_Auth",9923103197@mail.jiit.ac.in,Sneha Reddy
-B002,Hindustan Traders Pvt Ltd,Waste Broker,metal_scrap_mixed,mixed,Clean,2,202,Mumbai,Maharashtra,19.08,72.88,Collection_Fee: ₹1800-2300/ton,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Vikram Patel
-B003,Urban Industries Pvt Ltd,Hazardous Waste Facility,"batteries_lead_acid,chemical_residue,solvents_contaminated",hazardous,Grade B,2,1002,Mumbai,Maharashtra,19.08,72.88,Negotiable,"MoEFCC,SPCB_Auth,CPCB_Auth",.,Rajesh Patel
-B004,Green Industries Pvt Ltd,Wire Manufacturer,"metal_scrap_brass,aluminum_cans",metal,Clean,2,202,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹1400-1900/ton,CPCB_Auth,.,Vikram Sharma
-B005,Eco Industries Pvt Ltd,Organic Waste Processor,"organic_waste,food_waste,wood_waste",organic,Mixed,20,1020,Delhi,Delhi,28.61,77.21,Negotiable,"CPCB_Auth,MoEFCC,SPCB_Auth",.,Karthik Singh
-B006,Green Traders Pvt Ltd,Chemical Waste Processor,"chemical_residue,used_oil,solvents_contaminated","chemical,hazardous",Grade A,10,1010,Kolkata,West Bengal,22.57,88.36,Collection_Fee: ₹1000-1500/ton,"CPCB_Auth,SPCB_Auth",.,Anjali Kumar
-B007,Urban Traders Pvt Ltd,Textile Recycler,"textile_waste,fabric_scraps",textile,Grade C,10,110,Hyderabad,Telangana,17.39,78.49,₹80-85/kg,"MoEFCC,SPCB_Auth",.,Suresh Verma
-B008,Hindustan Processors Pvt Ltd,Textile Recycler,fabric_scraps,textile,Grade B,5,1005,Jaipur,Rajasthan,26.91,75.79,Market_Rate,SPCB_Auth,.,Priya Iyer
-B009,Hindustan Traders Pvt Ltd,General Recycler,"glass_scrap,tire_waste,packaging_mixed",mixed,As-Is,2,1002,Ahmedabad,Gujarat,23.02,72.57,Market_Rate,"CPCB_Auth,MoEFCC,SPCB_Auth",.,Rohan Mehta
-B010,Tech Enterprises Pvt Ltd,Hazardous Waste Facility,"chemical_residue,batteries_lead_acid",hazardous,Grade A,10,1010,Chennai,Tamil Nadu,13.08,80.27,Market_Rate,MoEFCC,.,Suresh Sharma
-B011,Royal Processors Pvt Ltd,Chemical Waste Processor,"paint_sludge,used_coolant,solvents_contaminated","chemical,hazardous",Grade A,20,520,Pune,Maharashtra,18.52,73.85,₹19000-21000/ton,"SPCB_Auth,MoEFCC,CPCB_Auth",.,Karthik Iyer
-B012,Metro Enterprises Pvt Ltd,Organic Waste Processor,yard_waste,organic,Grade C,20,120,Hyderabad,Telangana,17.39,78.49,₹8000-10000/ton,SPCB_Auth,.,Rohan Verma
-B013,Royal Enterprises Pvt Ltd,General Recycler,packaging_mixed,mixed,Grade C,5,1005,Ahmedabad,Gujarat,23.02,72.57,₹13-18/kg,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Suresh Gupta
-B014,Royal Enterprises Pvt Ltd,Hazardous Waste Facility,solvents_contaminated,hazardous,Grade B,1,201,Bengaluru,Karnataka,12.97,77.59,Collection_Fee: ₹1300-1800/ton,SPCB_Auth,.,Amit Mehta
-B015,Hindustan Traders Pvt Ltd,Hazardous Waste Facility,chemical_residue,hazardous,Grade B,2,102,Ahmedabad,Gujarat,23.02,72.57,₹12000-14000/ton,MoEFCC,.,Sneha Reddy
-B016,Green Processors Pvt Ltd,General Recycler,"rubber_scrap,glass_scrap",mixed,Grade B,1,201,Chennai,Tamil Nadu,13.08,80.27,₹34000-36000/ton,"CPCB_Auth,MoEFCC",.,Anjali Sharma
-B017,Urban Enterprises Pvt Ltd,Wire Manufacturer,"metal_scrap_aluminum,aluminum_cans",metal,Grade B,20,70,Bengaluru,Karnataka,12.97,77.59,Collection_Fee: ₹1700-2200/ton,"SPCB_Auth,MoEFCC,CPCB_Auth",.,Anjali Sharma
-B018,Apex Solutions Pvt Ltd,Textile Recycler,carpet_waste,textile,Grade C,5,1005,Ahmedabad,Gujarat,23.02,72.57,Market_Rate,CPCB_Auth,.,Karthik Verma
-B019,Re Solutions Pvt Ltd,Paper & Cardboard Processor,"cardboard_boxes,office_paper,newsprint",paper,Clean,2,52,Pune,Maharashtra,18.52,73.85,₹48-53/kg,"CPCB_Auth,MoEFCC",.,Vikram Joshi
-B020,Eco Enterprises Pvt Ltd,Textile Recycler,"fabric_scraps,thread_waste",textile,Grade B,10,110,Lucknow,Uttar Pradesh,26.85,80.95,Negotiable,MoEFCC,.,Karthik Sharma
-B021,Royal Processors Pvt Ltd,Wire Manufacturer,metal_scrap_aluminum,metal,Clean,20,520,Kolkata,West Bengal,22.57,88.36,₹37-42/kg,"CPCB_Auth,MoEFCC,SPCB_Auth",.,Karthik Patel
-B022,Metro Traders Pvt Ltd,Electronics Recycler,circuit_boards,electronic,As-Is,20,70,Ahmedabad,Gujarat,23.02,72.57,₹68-73/kg,"SPCB_Auth,CPCB_Auth,MoEFCC",.,Karthik Joshi
-B023,Bharat Enterprises Pvt Ltd,Hazardous Waste Facility,chemical_residue,hazardous,Grade C,2,1002,Chennai,Tamil Nadu,13.08,80.27,Market_Rate,"CPCB_Auth,SPCB_Auth",.,Karthik Reddy
-B024,Re Solutions Pvt Ltd,Wire Manufacturer,"metal_scrap_copper,steel_drums,metal_scrap_aluminum",metal,Grade B,1,501,Ahmedabad,Gujarat,23.02,72.57,₹67-72/kg,"SPCB_Auth,CPCB_Auth,MoEFCC",.,Sneha Joshi
-B025,Eco Solutions Pvt Ltd,Wire Manufacturer,"steel_drums,metal_scrap_mixed,metal_scrap_aluminum",metal,Grade B,1,1001,Chennai,Tamil Nadu,13.08,80.27,Collection_Fee: ₹1800-2300/ton,SPCB_Auth,.,Karthik Iyer
-B026,Royal Enterprises Pvt Ltd,Waste Broker,metal_scrap_mixed,mixed,As-Is,1,501,Lucknow,Uttar Pradesh,26.85,80.95,Collection_Fee: ₹700-1200/ton,"MoEFCC,CPCB_Auth",.,Anjali Patel
-B027,Hindustan Traders Pvt Ltd,Wire Manufacturer,"metal_scrap_mixed,steel_drums,metal_scrap_aluminum",metal,Grade B,2,1002,Pune,Maharashtra,18.52,73.85,Negotiable,"MoEFCC,CPCB_Auth",.,Rajesh Reddy
-B028,Metro Industries Pvt Ltd,Paper & Cardboard Processor,"cardboard_boxes,newsprint",paper,Clean,20,1020,Kolkata,West Bengal,22.57,88.36,₹27000-29000/ton,CPCB_Auth,.,Anjali Reddy
-B029,Bharat Traders Pvt Ltd,General Recycler,"packaging_mixed,tire_waste",mixed,Clean,1,101,Mumbai,Maharashtra,19.08,72.88,Market_Rate,CPCB_Auth,.,Rohan Iyer
-B030,Metro Enterprises Pvt Ltd,Textile Recycler,"fabric_scraps,carpet_waste,textile_waste",textile,Grade C,20,520,Delhi,Delhi,28.61,77.21,₹27000-29000/ton,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Suresh Sharma
-B031,Eco Traders Pvt Ltd,Waste Broker,"electronic_components,plastic_packaging,cardboard_boxes",mixed,Grade C,2,1002,Lucknow,Uttar Pradesh,26.85,80.95,₹12000-14000/ton,"SPCB_Auth,MoEFCC",.,Sneha Singh
-B032,Green Traders Pvt Ltd,Textile Recycler,carpet_waste,textile,Grade C,2,202,Mumbai,Maharashtra,19.08,72.88,Market_Rate,"CPCB_Auth,SPCB_Auth",.,Suresh Sharma
-B033,Tech Industries Pvt Ltd,Textile Recycler,"thread_waste,fabric_scraps,textile_waste",textile,As-Is,2,102,Kolkata,West Bengal,22.57,88.36,Collection_Fee: ₹600-1100/ton,"MoEFCC,CPCB_Auth",.,Neha Mehta
-B034,Eco Processors Pvt Ltd,Wire Manufacturer,metal_scrap_mixed,metal,Grade A,2,102,Jaipur,Rajasthan,26.91,75.79,Negotiable,"MoEFCC,SPCB_Auth",.,Priya Joshi
-B035,Eco Traders Pvt Ltd,Paper & Cardboard Processor,"newsprint,office_paper",paper,Mixed,5,55,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹1600-2100/ton,"SPCB_Auth,CPCB_Auth",.,Vikram Verma
-B036,Eco Traders Pvt Ltd,Chemical Waste Processor,"chemical_residue,used_oil,used_coolant","chemical,hazardous",Clean,5,505,Mumbai,Maharashtra,19.08,72.88,₹51-56/kg,SPCB_Auth,.,Sneha Mehta
-B037,Hindustan Industries Pvt Ltd,Chemical Waste Processor,used_coolant,"chemical,hazardous",As-Is,20,1020,Hyderabad,Telangana,17.39,78.49,₹16-21/kg,MoEFCC,.,Karthik Sharma
-B038,Eco Processors Pvt Ltd,Hazardous Waste Facility,"solvents_contaminated,batteries_lead_acid",hazardous,Clean,2,1002,Delhi,Delhi,28.61,77.21,₹19-24/kg,"MoEFCC,CPCB_Auth",.,Priya Reddy
-B039,Hindustan Industries Pvt Ltd,Children Toys Industry,"hdpe_containers,packaging_plastic",plastic,Grade B,10,110,Lucknow,Uttar Pradesh,26.85,80.95,₹74-79/kg,"CPCB_Auth,MoEFCC",.,Sneha Patel
-B040,Re Enterprises Pvt Ltd,Electronics Recycler,"pcb_scrap,hard_drives,circuit_boards",electronic,As-Is,2,52,Pune,Maharashtra,18.52,73.85,₹29000-31000/ton,SPCB_Auth,.,Rohan Verma
-B041,Hindustan Solutions Pvt Ltd,Wire Manufacturer,"metal_scrap_brass,steel_drums",metal,Grade C,5,505,Lucknow,Uttar Pradesh,26.85,80.95,Market_Rate,"SPCB_Auth,MoEFCC,CPCB_Auth",.,Anjali Iyer
-B042,Royal Traders Pvt Ltd,Paper & Cardboard Processor,"packaging_cardboard,newsprint,cardboard_boxes",paper,Mixed,1,201,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹1600-2100/ton,"SPCB_Auth,MoEFCC",.,Vikram Singh
-B043,Royal Enterprises Pvt Ltd,Hazardous Waste Facility,"solvents_contaminated,chemical_residue",hazardous,Mixed,10,210,Lucknow,Uttar Pradesh,26.85,80.95,Market_Rate,MoEFCC,.,Karthik Kumar
-B044,Metro Enterprises Pvt Ltd,Chemical Waste Processor,"used_oil,chemical_residue","chemical,hazardous",Grade C,5,55,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹1100-1600/ton,CPCB_Auth,.,Vikram Gupta
-B045,Metro Solutions Pvt Ltd,Organic Waste Processor,food_waste,organic,Mixed,2,102,Delhi,Delhi,28.61,77.21,₹64-69/kg,MoEFCC,.,Rajesh Iyer
-B046,Eco Industries Pvt Ltd,Electronics Recycler,"batteries_lithium,hard_drives",electronic,Grade A,5,1005,Kolkata,West Bengal,22.57,88.36,Collection_Fee: ₹1200-1700/ton,SPCB_Auth,.,Rajesh Mehta
-B047,Tech Solutions Pvt Ltd,Waste Broker,cardboard_boxes,mixed,Grade C,1,501,Bengaluru,Karnataka,12.97,77.59,Collection_Fee: ₹1500-2000/ton,"SPCB_Auth,CPCB_Auth",.,Suresh Mehta
-B048,Tech Enterprises Pvt Ltd,Paper & Cardboard Processor,office_paper,paper,Grade A,20,220,Mumbai,Maharashtra,19.08,72.88,Collection_Fee: ₹1400-1900/ton,"SPCB_Auth,MoEFCC",.,Sneha Verma
-B049,Royal Enterprises Pvt Ltd,Textile Recycler,carpet_waste,textile,Grade B,2,502,Kolkata,West Bengal,22.57,88.36,₹6000-8000/ton,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Vikram Mehta
-B050,Green Industries Pvt Ltd,Paper & Cardboard Processor,"office_paper,packaging_cardboard,newsprint",paper,As-Is,1,1001,Jaipur,Rajasthan,26.91,75.79,₹80-85/kg,"SPCB_Auth,CPCB_Auth,MoEFCC",.,Sneha Sharma
-B051,Hindustan Solutions Pvt Ltd,Hazardous Waste Facility,"solvents_contaminated,chemical_residue",hazardous,Clean,10,60,Kolkata,West Bengal,22.57,88.36,Negotiable,"CPCB_Auth,MoEFCC",.,Rajesh Iyer
-B052,Bharat Traders Pvt Ltd,Wire Manufacturer,metal_scrap_aluminum,metal,Grade A,1,101,Pune,Maharashtra,18.52,73.85,Negotiable,"CPCB_Auth,MoEFCC,SPCB_Auth",.,Vikram Singh
-B053,Green Industries Pvt Ltd,Children Toys Industry,"pet_bottles,plastic_packaging,packaging_plastic",plastic,Grade B,20,520,Pune,Maharashtra,18.52,73.85,Market_Rate,"SPCB_Auth,MoEFCC",.,Rohan Patel
-B054,Apex Solutions Pvt Ltd,Hazardous Waste Facility,batteries_lead_acid,hazardous,Mixed,10,60,Ahmedabad,Gujarat,23.02,72.57,₹24000-26000/ton,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Karthik Iyer
-B055,Bharat Industries Pvt Ltd,General Recycler,"tire_waste,packaging_mixed,rubber_scrap",mixed,Grade C,1,51,Hyderabad,Telangana,17.39,78.49,Negotiable,"CPCB_Auth,SPCB_Auth",.,Anjali Reddy
-B056,Tech Solutions Pvt Ltd,General Recycler,"tire_waste,rubber_scrap,glass_scrap",mixed,Grade A,1,201,Bengaluru,Karnataka,12.97,77.59,₹23000-25000/ton,CPCB_Auth,.,Rohan Kumar
-B057,Tech Solutions Pvt Ltd,General Recycler,"tire_waste,rubber_scrap,packaging_mixed",mixed,Grade A,20,70,Delhi,Delhi,28.61,77.21,₹59-64/kg,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Rajesh Kumar
-B058,Metro Processors Pvt Ltd,Chemical Waste Processor,used_oil,"chemical,hazardous",Grade C,5,1005,Chennai,Tamil Nadu,13.08,80.27,Negotiable,SPCB_Auth,.,Karthik Verma
-B059,Tech Processors Pvt Ltd,Chemical Waste Processor,paint_sludge,"chemical,hazardous",Grade C,5,205,Ahmedabad,Gujarat,23.02,72.57,₹11000-13000/ton,CPCB_Auth,.,Anjali Kumar
-B060,Hindustan Processors Pvt Ltd,Children Toys Industry,"pet_bottles,pvc_scrap,plastic_packaging",plastic,Grade A,10,210,Jaipur,Rajasthan,26.91,75.79,Negotiable,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Karthik Iyer
-B061,Eco Traders Pvt Ltd,Waste Broker,electronic_components,mixed,Grade A,5,55,Ahmedabad,Gujarat,23.02,72.57,₹27000-29000/ton,"SPCB_Auth,CPCB_Auth",.,Amit Singh
-B062,Apex Enterprises Pvt Ltd,Organic Waste Processor,"food_waste,agricultural_waste",organic,As-Is,2,1002,Chennai,Tamil Nadu,13.08,80.27,Collection_Fee: ₹600-1100/ton,"SPCB_Auth,CPCB_Auth",.,Amit Kumar
-B063,Re Traders Pvt Ltd,Electronics Recycler,batteries_lithium,electronic,As-Is,1,501,Pune,Maharashtra,18.52,73.85,Collection_Fee: ₹1000-1500/ton,"SPCB_Auth,CPCB_Auth",.,Anjali Kumar
-B064,Bharat Processors Pvt Ltd,Waste Broker,cardboard_boxes,mixed,As-Is,1,1001,Ahmedabad,Gujarat,23.02,72.57,Negotiable,"SPCB_Auth,MoEFCC",.,Neha Singh
-B065,Green Processors Pvt Ltd,Children Toys Industry,"pvc_scrap,packaging_plastic",plastic,Grade B,2,102,Pune,Maharashtra,18.52,73.85,Collection_Fee: ₹1500-2000/ton,MoEFCC,.,Karthik Sharma
-B066,Re Solutions Pvt Ltd,Hazardous Waste Facility,batteries_lead_acid,hazardous,Mixed,5,505,Ahmedabad,Gujarat,23.02,72.57,Negotiable,"SPCB_Auth,MoEFCC,CPCB_Auth",.,Neha Joshi
-B067,Urban Enterprises Pvt Ltd,Wire Manufacturer,aluminum_cans,metal,Clean,1,101,Kolkata,West Bengal,22.57,88.36,₹19000-21000/ton,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Suresh Verma
-B068,Hindustan Processors Pvt Ltd,Hazardous Waste Facility,chemical_residue,hazardous,Grade A,2,502,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹900-1400/ton,MoEFCC,.,Amit Sharma
-B069,Tech Traders Pvt Ltd,Electronics Recycler,"pcb_scrap,displays_lcd,batteries_lithium",electronic,Mixed,1,101,Jaipur,Rajasthan,26.91,75.79,Collection_Fee: ₹1600-2100/ton,SPCB_Auth,.,Rohan Singh
-B070,Hindustan Processors Pvt Ltd,Wire Manufacturer,"metal_scrap_steel,steel_drums,metal_scrap_brass",metal,Grade C,20,120,Kolkata,West Bengal,22.57,88.36,₹57-62/kg,"MoEFCC,SPCB_Auth",.,Rohan Iyer
-B071,Urban Industries Pvt Ltd,Organic Waste Processor,wood_waste,organic,As-Is,5,55,Kolkata,West Bengal,22.57,88.36,₹32-37/kg,"MoEFCC,SPCB_Auth",.,Karthik Gupta
-B072,Eco Traders Pvt Ltd,Chemical Waste Processor,"used_oil,paint_sludge,solvents_contaminated","chemical,hazardous",Mixed,2,502,Jaipur,Rajasthan,26.91,75.79,Collection_Fee: ₹900-1400/ton,CPCB_Auth,.,Rohan Joshi
-B073,Re Processors Pvt Ltd,Paper & Cardboard Processor,"office_paper,cardboard_boxes",paper,Grade A,1,51,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹2000-2500/ton,SPCB_Auth,.,Amit Iyer
-B074,Metro Solutions Pvt Ltd,Wire Manufacturer,"metal_scrap_brass,steel_drums",metal,As-Is,1,101,Chennai,Tamil Nadu,13.08,80.27,Negotiable,"SPCB_Auth,MoEFCC",.,Anjali Kumar
-B075,Eco Industries Pvt Ltd,Organic Waste Processor,food_waste,organic,Grade B,10,510,Hyderabad,Telangana,17.39,78.49,Market_Rate,"MoEFCC,SPCB_Auth,CPCB_Auth",.,Anjali Singh
-B076,Royal Industries Pvt Ltd,Children Toys Industry,packaging_plastic,plastic,Clean,10,1010,Bengaluru,Karnataka,12.97,77.59,₹15000-17000/ton,"CPCB_Auth,MoEFCC",.,Neha Mehta
-B077,Royal Industries Pvt Ltd,Wire Manufacturer,"metal_scrap_steel,aluminum_cans,metal_scrap_aluminum",metal,Grade C,1,201,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹500-1000/ton,CPCB_Auth,.,Karthik Patel
-B078,Royal Enterprises Pvt Ltd,Waste Broker,"metal_scrap_mixed,cardboard_boxes,electronic_components",mixed,Grade B,5,205,Mumbai,Maharashtra,19.08,72.88,₹11000-13000/ton,"MoEFCC,CPCB_Auth,SPCB_Auth",.,Priya Joshi
-B079,Metro Enterprises Pvt Ltd,Organic Waste Processor,yard_waste,organic,Grade C,20,520,Mumbai,Maharashtra,19.08,72.88,Negotiable,"MoEFCC,CPCB_Auth",.,Amit Joshi
-B080,Hindustan Traders Pvt Ltd,Waste Broker,"electronic_components,metal_scrap_mixed",mixed,Grade C,1,101,Jaipur,Rajasthan,26.91,75.79,Market_Rate,MoEFCC,.,Amit Reddy
-B081,Royal Processors Pvt Ltd,Organic Waste Processor,"wood_waste,agricultural_waste",organic,Grade B,1,501,Delhi,Delhi,28.61,77.21,Negotiable,"SPCB_Auth,MoEFCC,CPCB_Auth",.,Karthik Verma
-B082,Royal Traders Pvt Ltd,Organic Waste Processor,"organic_waste,yard_waste,agricultural_waste",organic,Grade C,1,101,Lucknow,Uttar Pradesh,26.85,80.95,₹5000-7000/ton,CPCB_Auth,.,Rohan Sharma
-B083,Urban Solutions Pvt Ltd,Children Toys Industry,"packaging_plastic,plastic_film,pet_bottles",plastic,Grade B,20,520,Lucknow,Uttar Pradesh,26.85,80.95,₹14-19/kg,CPCB_Auth,.,Karthik Reddy
-B084,Re Enterprises Pvt Ltd,Textile Recycler,"carpet_waste,fabric_scraps,textile_waste",textile,As-Is,20,70,Delhi,Delhi,28.61,77.21,Negotiable,CPCB_Auth,.,Neha Verma
-B085,Royal Enterprises Pvt Ltd,Textile Recycler,thread_waste,textile,As-Is,2,102,Hyderabad,Telangana,17.39,78.49,Negotiable,"CPCB_Auth,SPCB_Auth,MoEFCC",.,Vikram Kumar
-B086,Eco Processors Pvt Ltd,Textile Recycler,carpet_waste,textile,Mixed,5,105,Jaipur,Rajasthan,26.91,75.79,₹30-35/kg,"MoEFCC,CPCB_Auth",.,Anjali Patel
-B087,Urban Processors Pvt Ltd,Textile Recycler,fabric_scraps,textile,Clean,10,110,Kolkata,West Bengal,22.57,88.36,Negotiable,"MoEFCC,CPCB_Auth",.,Anjali Joshi
-B088,Urban Traders Pvt Ltd,Waste Broker,metal_scrap_mixed,mixed,Clean,10,60,Bengaluru,Karnataka,12.97,77.59,Market_Rate,"MoEFCC,CPCB_Auth",.,Neha Gupta
-B089,Tech Industries Pvt Ltd,General Recycler,"tire_waste,glass_scrap,packaging_mixed",mixed,As-Is,2,202,Chennai,Tamil Nadu,13.08,80.27,Negotiable,CPCB_Auth,.,Rajesh Reddy
-B090,Tech Enterprises Pvt Ltd,Paper & Cardboard Processor,"packaging_cardboard,office_paper",paper,Grade B,5,505,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹800-1300/ton,"SPCB_Auth,CPCB_Auth,MoEFCC",.,Neha Sharma
-B091,Royal Solutions Pvt Ltd,Electronics Recycler,hard_drives,electronic,Grade B,1,201,Chennai,Tamil Nadu,13.08,80.27,Market_Rate,CPCB_Auth,.,Amit Iyer
-B092,Royal Traders Pvt Ltd,Wastewater Treatment Plant,mixed_waste,mixed,Grade C,1,201,Lucknow,Uttar Pradesh,26.85,80.95,Collection_Fee: ₹1600-2100/ton,"SPCB_Auth,MoEFCC,CPCB_Auth",.,Suresh Gupta
-B093,Royal Processors Pvt Ltd,Electronics Recycler,"pcb_scrap,computer_scrap,circuit_boards",electronic,Grade C,20,520,Hyderabad,Telangana,17.39,78.49,₹76-81/kg,"SPCB_Auth,CPCB_Auth",.,Rohan Patel
-B094,Re Traders Pvt Ltd,Children Toys Industry,"pet_bottles,hdpe_containers",plastic,Clean,2,102,Hyderabad,Telangana,17.39,78.49,₹14000-16000/ton,"MoEFCC,SPCB_Auth,CPCB_Auth",.,Suresh Mehta
-B095,Royal Solutions Pvt Ltd,Wastewater Treatment Plant,mixed_waste,mixed,Grade B,1,501,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹1700-2200/ton,"MoEFCC,SPCB_Auth,CPCB_Auth",.,Suresh Verma
-B096,Bharat Enterprises Pvt Ltd,Hazardous Waste Facility,"solvents_contaminated,batteries_lead_acid",hazardous,Clean,1,201,Lucknow,Uttar Pradesh,26.85,80.95,₹73-78/kg,SPCB_Auth,.,Priya Iyer
-B097,Metro Industries Pvt Ltd,Wastewater Treatment Plant,mixed_waste,mixed,Grade B,10,60,Bengaluru,Karnataka,12.97,77.59,₹21000-23000/ton,"CPCB_Auth,MoEFCC",.,Rohan Singh
-B098,Royal Solutions Pvt Ltd,Material Recovery Facility (MRF),mixed_waste,mixed,Mixed,1,501,Bengaluru,Karnataka,12.97,77.59,Collection_Fee: ₹1400-1900/ton,MoEFCC,.,Amit Sharma
-B099,Royal Enterprises Pvt Ltd,Wastewater Treatment Plant,mixed_waste,mixed,Grade A,10,110,Kolkata,West Bengal,22.57,88.36,₹61-66/kg,"MoEFCC,CPCB_Auth,SPCB_Auth",.,Vikram Gupta
-B100,Hindustan Processors Pvt Ltd,Wire Manufacturer,"steel_drums,metal_scrap_brass",metal,As-Is,1,101,Chennai,Tamil Nadu,13.08,80.27,Negotiable,CPCB_Auth,.,Vikram Joshi
+B001,Hindustan Industries Pvt Ltd,Textile Recycler,"thread_waste,carpet_waste",textile,Mixed,10,110,Pune,Maharashtra,18.52,73.85,₹11000-13000/ton,"MoEFCC,SPCB_Auth,CPCB_Auth",armangupta1511@gmail.com,Rajesh Gupta
+B002,Eco Traders Pvt Ltd,General Recycler,tire_waste,mixed,Grade C,10,1010,Jaipur,Rajasthan,26.91,75.79,Market_Rate,MoEFCC,querry@divyanshsingh.xyz,Suresh Mehta
+B003,Urban Processors Pvt Ltd,Hazardous Waste Facility,"solvents_contaminated,batteries_lead_acid,chemical_residue",hazardous,Clean,20,1020,Kolkata,West Bengal,22.57,88.36,Market_Rate,"MoEFCC,CPCB_Auth",9923103028@mail.jiit.ac.in,Suresh Singh
+B004,Royal Processors Pvt Ltd,Hazardous Waste Facility,solvents_contaminated,hazardous,Clean,20,120,Chennai,Tamil Nadu,13.08,80.27,₹19000-21000/ton,"CPCB_Auth,MoEFCC,SPCB_Auth",9923103028@mail.jiit.ac.in,Amit Mehta
+B005,Apex Industries Pvt Ltd,Organic Waste Processor,"wood_waste,food_waste",organic,Grade A,10,60,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹500-1000/ton,"MoEFCC,CPCB_Auth",9923103028@mail.jiit.ac.in,Suresh Gupta
+B006,Royal Enterprises Pvt Ltd,Electronics Recycler,"batteries_lithium,hard_drives",electronic,Mixed,1,101,Kolkata,West Bengal,22.57,88.36,₹22000-24000/ton,CPCB_Auth,9923103197@mail.jiit.ac.in,Anjali Reddy
+B007,Re Processors Pvt Ltd,Chemical Waste Processor,"used_coolant,solvents_contaminated","chemical,hazardous",As-Is,2,1002,Kolkata,West Bengal,22.57,88.36,₹21000-23000/ton,MoEFCC,divyanshsinghnrj@gmail.com,Vikram Kumar
+B008,Apex Solutions Pvt Ltd,Electronics Recycler,"computer_scrap,pcb_scrap,displays_lcd",electronic,Clean,5,1005,Lucknow,Uttar Pradesh,26.85,80.95,₹14-19/kg,"MoEFCC,CPCB_Auth,SPCB_Auth",querry@divyanshsingh.xyz,Rajesh Gupta
+B009,Royal Solutions Pvt Ltd,General Recycler,glass_scrap,mixed,Grade A,1,201,Ahmedabad,Gujarat,23.02,72.57,Market_Rate,"SPCB_Auth,MoEFCC",querry@divyanshsingh.xyz,Anjali Verma
+B010,Re Solutions Pvt Ltd,Hazardous Waste Facility,"solvents_contaminated,chemical_residue",hazardous,Grade C,2,102,Jaipur,Rajasthan,26.91,75.79,₹44-49/kg,MoEFCC,armangupta1511@gmail.com,Priya Patel
+B011,Royal Enterprises Pvt Ltd,Textile Recycler,thread_waste,textile,Grade B,1,101,Ahmedabad,Gujarat,23.02,72.57,₹38-43/kg,"MoEFCC,CPCB_Auth,SPCB_Auth",9923103197@mail.jiit.ac.in,Suresh Iyer
+B012,Hindustan Industries Pvt Ltd,Children Toys Industry,"packaging_plastic,pvc_scrap,plastic_film",plastic,As-Is,1,201,Kolkata,West Bengal,22.57,88.36,Negotiable,"MoEFCC,CPCB_Auth,SPCB_Auth",aditya1812khandelia@gmail.com,Amit Verma
+B013,Tech Solutions Pvt Ltd,Electronics Recycler,"circuit_boards,pcb_scrap,hard_drives",electronic,Grade C,2,1002,Bengaluru,Karnataka,12.97,77.59,Negotiable,"SPCB_Auth,CPCB_Auth",divyanshsinghnrj@gmail.com,Sneha Kumar
+B014,Royal Solutions Pvt Ltd,Waste Broker,"electronic_components,plastic_packaging,metal_scrap_mixed",mixed,Clean,2,52,Lucknow,Uttar Pradesh,26.85,80.95,₹34-39/kg,"SPCB_Auth,CPCB_Auth",9923103216@mail.jiit.ac.in,Anjali Singh
+B015,Tech Solutions Pvt Ltd,General Recycler,"packaging_mixed,glass_scrap",mixed,Grade B,5,55,Mumbai,Maharashtra,19.08,72.88,₹33-38/kg,MoEFCC,aditya1812khandelia@gmail.com,Sneha Joshi
+B016,Urban Industries Pvt Ltd,Waste Broker,"electronic_components,metal_scrap_mixed,cardboard_boxes",mixed,Grade C,5,505,Ahmedabad,Gujarat,23.02,72.57,Market_Rate,"SPCB_Auth,MoEFCC,CPCB_Auth",9923103216@mail.jiit.ac.in,Suresh Joshi
+B017,Urban Processors Pvt Ltd,Chemical Waste Processor,"paint_sludge,used_coolant","chemical,hazardous",Mixed,10,210,Chennai,Tamil Nadu,13.08,80.27,Negotiable,CPCB_Auth,9923103028@mail.jiit.ac.in,Anjali Kumar
+B018,Apex Traders Pvt Ltd,Organic Waste Processor,"yard_waste,food_waste,agricultural_waste",organic,Grade B,5,55,Bengaluru,Karnataka,12.97,77.59,Market_Rate,"MoEFCC,CPCB_Auth,SPCB_Auth",9923103197@mail.jiit.ac.in,Rohan Verma
+B019,Metro Traders Pvt Ltd,General Recycler,tire_waste,mixed,Grade B,2,102,Kolkata,West Bengal,22.57,88.36,Negotiable,"MoEFCC,SPCB_Auth",9923103216@mail.jiit.ac.in,Amit Verma
+B020,Bharat Industries Pvt Ltd,Hazardous Waste Facility,"batteries_lead_acid,chemical_residue,solvents_contaminated",hazardous,Clean,2,202,Kolkata,West Bengal,22.57,88.36,Negotiable,"CPCB_Auth,MoEFCC,SPCB_Auth",divyanshsinghnrj@gmail.com,Rohan Gupta
+B021,Bharat Enterprises Pvt Ltd,Organic Waste Processor,"food_waste,wood_waste",organic,Grade A,1,201,Delhi,Delhi,28.61,77.21,Negotiable,MoEFCC,armangupta1511@gmail.com,Sneha Kumar
+B022,Green Industries Pvt Ltd,Children Toys Industry,"packaging_plastic,plastic_film,pvc_scrap",plastic,Grade B,2,102,Bengaluru,Karnataka,12.97,77.59,₹33000-35000/ton,MoEFCC,9923103197@mail.jiit.ac.in,Sneha Kumar
+B023,Green Traders Pvt Ltd,General Recycler,glass_scrap,mixed,Grade C,1,501,Kolkata,West Bengal,22.57,88.36,Market_Rate,"CPCB_Auth,SPCB_Auth,MoEFCC",aditya1812khandelia@gmail.com,Rohan Singh
+B024,Green Industries Pvt Ltd,Waste Broker,"cardboard_boxes,plastic_packaging,electronic_components",mixed,Grade C,10,210,Jaipur,Rajasthan,26.91,75.79,Negotiable,"MoEFCC,SPCB_Auth,CPCB_Auth",9923103028@mail.jiit.ac.in,Neha Singh
+B025,Eco Traders Pvt Ltd,Paper & Cardboard Processor,"office_paper,packaging_cardboard",paper,As-Is,10,110,Mumbai,Maharashtra,19.08,72.88,₹79-84/kg,SPCB_Auth,armangupta1511@gmail.com,Suresh Iyer
+B026,Re Processors Pvt Ltd,Paper & Cardboard Processor,office_paper,paper,Mixed,1,1001,Lucknow,Uttar Pradesh,26.85,80.95,Collection_Fee: ₹1300-1800/ton,CPCB_Auth,9923103216@mail.jiit.ac.in,Priya Mehta
+B027,Tech Enterprises Pvt Ltd,General Recycler,tire_waste,mixed,Grade C,5,205,Hyderabad,Telangana,17.39,78.49,₹14000-16000/ton,"SPCB_Auth,CPCB_Auth",9923103216@mail.jiit.ac.in,Sneha Verma
+B028,Bharat Traders Pvt Ltd,Textile Recycler,"carpet_waste,fabric_scraps",textile,Grade C,5,55,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹900-1400/ton,"CPCB_Auth,MoEFCC,SPCB_Auth",armangupta1511@gmail.com,Rajesh Gupta
+B029,Bharat Traders Pvt Ltd,Children Toys Industry,"plastic_packaging,hdpe_containers,pet_bottles",plastic,Grade C,1,501,Mumbai,Maharashtra,19.08,72.88,₹29000-31000/ton,"MoEFCC,CPCB_Auth",9923103216@mail.jiit.ac.in,Karthik Verma
+B030,Royal Processors Pvt Ltd,Textile Recycler,textile_waste,textile,Clean,5,505,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹700-1200/ton,"SPCB_Auth,CPCB_Auth,MoEFCC",9923103028@mail.jiit.ac.in,Suresh Sharma
+B031,Hindustan Processors Pvt Ltd,Chemical Waste Processor,"paint_sludge,used_coolant","chemical,hazardous",Mixed,2,102,Kolkata,West Bengal,22.57,88.36,Collection_Fee: ₹1600-2100/ton,SPCB_Auth,9923103216@mail.jiit.ac.in,Priya Iyer
+B032,Bharat Solutions Pvt Ltd,Paper & Cardboard Processor,packaging_cardboard,paper,Clean,5,55,Pune,Maharashtra,18.52,73.85,₹16000-18000/ton,"MoEFCC,SPCB_Auth",9923103197@mail.jiit.ac.in,Vikram Kumar
+B033,Apex Solutions Pvt Ltd,Wire Manufacturer,aluminum_cans,metal,As-Is,10,110,Ahmedabad,Gujarat,23.02,72.57,₹66-71/kg,"SPCB_Auth,MoEFCC",querry@divyanshsingh.xyz,Sneha Joshi
+B034,Urban Solutions Pvt Ltd,Electronics Recycler,circuit_boards,electronic,As-Is,10,110,Jaipur,Rajasthan,26.91,75.79,₹76-81/kg,CPCB_Auth,aditya1812khandelia@gmail.com,Anjali Reddy
+B035,Green Industries Pvt Ltd,Waste Broker,"plastic_packaging,electronic_components",mixed,Clean,10,60,Kolkata,West Bengal,22.57,88.36,₹10000-12000/ton,"SPCB_Auth,MoEFCC",aditya1812khandelia@gmail.com,Karthik Singh
+B036,Urban Enterprises Pvt Ltd,Organic Waste Processor,"agricultural_waste,wood_waste,organic_waste",organic,Grade A,10,510,Ahmedabad,Gujarat,23.02,72.57,Negotiable,"SPCB_Auth,CPCB_Auth,MoEFCC",querry@divyanshsingh.xyz,Suresh Gupta
+B037,Apex Processors Pvt Ltd,General Recycler,tire_waste,mixed,Grade B,2,502,Mumbai,Maharashtra,19.08,72.88,Collection_Fee: ₹1600-2100/ton,"CPCB_Auth,SPCB_Auth",divyanshsinghnrj@gmail.com,Rajesh Reddy
+B038,Urban Processors Pvt Ltd,General Recycler,tire_waste,mixed,Clean,1,201,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹1600-2100/ton,SPCB_Auth,armangupta1511@gmail.com,Amit Singh
+B039,Tech Enterprises Pvt Ltd,Wire Manufacturer,"metal_scrap_copper,metal_scrap_aluminum,steel_drums",metal,As-Is,5,205,Kolkata,West Bengal,22.57,88.36,Market_Rate,MoEFCC,aditya1812khandelia@gmail.com,Rohan Singh
+B040,Apex Solutions Pvt Ltd,Electronics Recycler,hard_drives,electronic,Grade B,1,101,Ahmedabad,Gujarat,23.02,72.57,Market_Rate,"SPCB_Auth,MoEFCC,CPCB_Auth",9923103197@mail.jiit.ac.in,Rohan Sharma
+B041,Urban Solutions Pvt Ltd,Electronics Recycler,"circuit_boards,computer_scrap",electronic,Grade C,20,120,Pune,Maharashtra,18.52,73.85,₹13000-15000/ton,"CPCB_Auth,SPCB_Auth",armangupta1511@gmail.com,Rohan Mehta
+B042,Green Solutions Pvt Ltd,Electronics Recycler,"hard_drives,computer_scrap,displays_lcd",electronic,As-Is,20,70,Kolkata,West Bengal,22.57,88.36,₹6000-8000/ton,SPCB_Auth,querry@divyanshsingh.xyz,Priya Singh
+B043,Re Solutions Pvt Ltd,Electronics Recycler,"batteries_lithium,displays_lcd,computer_scrap",electronic,Grade B,2,202,Lucknow,Uttar Pradesh,26.85,80.95,₹59-64/kg,"MoEFCC,CPCB_Auth,SPCB_Auth",querry@divyanshsingh.xyz,Rajesh Iyer
+B044,Urban Traders Pvt Ltd,Chemical Waste Processor,"chemical_residue,paint_sludge","chemical,hazardous",Grade C,5,505,Hyderabad,Telangana,17.39,78.49,Collection_Fee: ₹2000-2500/ton,"MoEFCC,SPCB_Auth",aditya1812khandelia@gmail.com,Priya Verma
+B045,Metro Traders Pvt Ltd,Organic Waste Processor,"food_waste,agricultural_waste,organic_waste",organic,Grade C,2,502,Hyderabad,Telangana,17.39,78.49,₹24-29/kg,"SPCB_Auth,CPCB_Auth,MoEFCC",aditya1812khandelia@gmail.com,Suresh Joshi
+B046,Apex Industries Pvt Ltd,Paper & Cardboard Processor,newsprint,paper,Clean,10,510,Bengaluru,Karnataka,12.97,77.59,Collection_Fee: ₹1900-2400/ton,"SPCB_Auth,MoEFCC,CPCB_Auth",9923103197@mail.jiit.ac.in,Karthik Joshi
+B047,Tech Traders Pvt Ltd,Organic Waste Processor,"wood_waste,organic_waste",organic,Clean,10,110,Pune,Maharashtra,18.52,73.85,Collection_Fee: ₹700-1200/ton,CPCB_Auth,9923103197@mail.jiit.ac.in,Priya Verma
+B048,Hindustan Industries Pvt Ltd,Electronics Recycler,"displays_lcd,circuit_boards,computer_scrap",electronic,Mixed,5,105,Hyderabad,Telangana,17.39,78.49,₹21000-23000/ton,"MoEFCC,CPCB_Auth",9923103197@mail.jiit.ac.in,Anjali Gupta
+B049,Royal Industries Pvt Ltd,Waste Broker,metal_scrap_mixed,mixed,Grade A,10,510,Pune,Maharashtra,18.52,73.85,₹49-54/kg,"MoEFCC,CPCB_Auth",querry@divyanshsingh.xyz,Vikram Joshi
+B050,Metro Processors Pvt Ltd,Children Toys Industry,plastic_packaging,plastic,Clean,10,510,Bengaluru,Karnataka,12.97,77.59,Market_Rate,"MoEFCC,CPCB_Auth",9923103197@mail.jiit.ac.in,Suresh Sharma
+B051,Re Processors Pvt Ltd,Chemical Waste Processor,"used_coolant,used_oil","chemical,hazardous",As-Is,20,1020,Mumbai,Maharashtra,19.08,72.88,₹10000-12000/ton,"SPCB_Auth,MoEFCC",aditya1812khandelia@gmail.com,Neha Mehta
+B052,Royal Industries Pvt Ltd,Waste Broker,"cardboard_boxes,metal_scrap_mixed",mixed,Grade C,20,70,Pune,Maharashtra,18.52,73.85,₹17000-19000/ton,"MoEFCC,SPCB_Auth,CPCB_Auth",querry@divyanshsingh.xyz,Priya Iyer
+B053,Re Enterprises Pvt Ltd,Textile Recycler,thread_waste,textile,Grade B,5,505,Mumbai,Maharashtra,19.08,72.88,₹12000-14000/ton,"CPCB_Auth,MoEFCC",divyanshsinghnrj@gmail.com,Priya Sharma
+B054,Royal Processors Pvt Ltd,Paper & Cardboard Processor,packaging_cardboard,paper,Grade B,2,102,Lucknow,Uttar Pradesh,26.85,80.95,Collection_Fee: ₹1300-1800/ton,"SPCB_Auth,CPCB_Auth,MoEFCC",armangupta1511@gmail.com,Amit Kumar
+B055,Royal Traders Pvt Ltd,General Recycler,glass_scrap,mixed,Grade B,10,1010,Chennai,Tamil Nadu,13.08,80.27,₹70-75/kg,"MoEFCC,SPCB_Auth",9923103216@mail.jiit.ac.in,Karthik Joshi
+B056,Green Solutions Pvt Ltd,Wire Manufacturer,"metal_scrap_aluminum,metal_scrap_steel,aluminum_cans",metal,Grade B,5,1005,Jaipur,Rajasthan,26.91,75.79,₹67-72/kg,MoEFCC,aditya1812khandelia@gmail.com,Neha Verma
+B057,Metro Processors Pvt Ltd,Electronics Recycler,"pcb_scrap,batteries_lithium,hard_drives",electronic,Grade C,2,52,Lucknow,Uttar Pradesh,26.85,80.95,Market_Rate,"CPCB_Auth,SPCB_Auth",9923103197@mail.jiit.ac.in,Anjali Joshi
+B058,Metro Enterprises Pvt Ltd,Textile Recycler,thread_waste,textile,Grade C,20,1020,Kolkata,West Bengal,22.57,88.36,Collection_Fee: ₹1700-2200/ton,"SPCB_Auth,CPCB_Auth,MoEFCC",querry@divyanshsingh.xyz,Sneha Mehta
+B059,Bharat Enterprises Pvt Ltd,Wire Manufacturer,"metal_scrap_copper,metal_scrap_mixed,metal_scrap_steel",metal,Grade C,20,120,Pune,Maharashtra,18.52,73.85,₹68-73/kg,"MoEFCC,SPCB_Auth,CPCB_Auth",9923103028@mail.jiit.ac.in,Sneha Gupta
+B060,Metro Processors Pvt Ltd,General Recycler,"rubber_scrap,packaging_mixed,glass_scrap",mixed,Grade B,5,55,Pune,Maharashtra,18.52,73.85,₹35000-37000/ton,"MoEFCC,SPCB_Auth,CPCB_Auth",querry@divyanshsingh.xyz,Sneha Patel
+B061,Metro Industries Pvt Ltd,Paper & Cardboard Processor,cardboard_boxes,paper,Clean,10,510,Pune,Maharashtra,18.52,73.85,Negotiable,SPCB_Auth,9923103028@mail.jiit.ac.in,Anjali Verma
+B062,Metro Industries Pvt Ltd,Wire Manufacturer,"aluminum_cans,metal_scrap_mixed",metal,Grade A,10,510,Ahmedabad,Gujarat,23.02,72.57,₹28000-30000/ton,SPCB_Auth,aditya1812khandelia@gmail.com,Anjali Joshi
+B063,Apex Industries Pvt Ltd,Waste Broker,"electronic_components,cardboard_boxes,metal_scrap_mixed",mixed,Clean,5,205,Delhi,Delhi,28.61,77.21,₹16000-18000/ton,"SPCB_Auth,MoEFCC,CPCB_Auth",9923103028@mail.jiit.ac.in,Karthik Sharma
+B064,Urban Processors Pvt Ltd,Hazardous Waste Facility,batteries_lead_acid,hazardous,As-Is,2,52,Bengaluru,Karnataka,12.97,77.59,Negotiable,CPCB_Auth,9923103216@mail.jiit.ac.in,Rohan Mehta
+B065,Bharat Processors Pvt Ltd,Electronics Recycler,"computer_scrap,displays_lcd",electronic,Grade B,2,202,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹1200-1700/ton,MoEFCC,9923103197@mail.jiit.ac.in,Anjali Iyer
+B066,Hindustan Solutions Pvt Ltd,General Recycler,"rubber_scrap,tire_waste,packaging_mixed",mixed,Grade C,10,510,Mumbai,Maharashtra,19.08,72.88,₹24-29/kg,"SPCB_Auth,MoEFCC,CPCB_Auth",aditya1812khandelia@gmail.com,Rajesh Joshi
+B067,Metro Solutions Pvt Ltd,Hazardous Waste Facility,batteries_lead_acid,hazardous,Grade C,5,205,Chennai,Tamil Nadu,13.08,80.27,Negotiable,MoEFCC,9923103197@mail.jiit.ac.in,Anjali Mehta
+B068,Green Industries Pvt Ltd,Children Toys Industry,"pvc_scrap,hdpe_containers",plastic,Grade A,10,110,Delhi,Delhi,28.61,77.21,₹12000-14000/ton,"CPCB_Auth,SPCB_Auth",querry@divyanshsingh.xyz,Karthik Joshi
+B069,Green Solutions Pvt Ltd,Chemical Waste Processor,"chemical_residue,paint_sludge","chemical,hazardous",Grade B,10,210,Chennai,Tamil Nadu,13.08,80.27,₹26000-28000/ton,"MoEFCC,CPCB_Auth",9923103197@mail.jiit.ac.in,Priya Patel
+B070,Tech Solutions Pvt Ltd,Hazardous Waste Facility,batteries_lead_acid,hazardous,Grade B,10,210,Mumbai,Maharashtra,19.08,72.88,Market_Rate,"MoEFCC,CPCB_Auth,SPCB_Auth",armangupta1511@gmail.com,Amit Sharma
+B071,Green Solutions Pvt Ltd,Children Toys Industry,"pvc_scrap,pet_bottles,packaging_plastic",plastic,Clean,1,51,Chennai,Tamil Nadu,13.08,80.27,₹49-54/kg,"MoEFCC,SPCB_Auth",querry@divyanshsingh.xyz,Sneha Patel
+B072,Eco Enterprises Pvt Ltd,Wire Manufacturer,"metal_scrap_steel,metal_scrap_aluminum,steel_drums",metal,As-Is,5,1005,Chennai,Tamil Nadu,13.08,80.27,₹23000-25000/ton,"SPCB_Auth,MoEFCC",9923103028@mail.jiit.ac.in,Karthik Kumar
+B073,Metro Processors Pvt Ltd,Textile Recycler,"carpet_waste,fabric_scraps,thread_waste",textile,Clean,5,1005,Ahmedabad,Gujarat,23.02,72.57,₹67-72/kg,MoEFCC,querry@divyanshsingh.xyz,Amit Verma
+B074,Re Processors Pvt Ltd,Electronics Recycler,hard_drives,electronic,Grade A,20,120,Bengaluru,Karnataka,12.97,77.59,Collection_Fee: ₹1700-2200/ton,CPCB_Auth,armangupta1511@gmail.com,Amit Joshi
+B075,Green Industries Pvt Ltd,Organic Waste Processor,wood_waste,organic,Grade A,2,52,Pune,Maharashtra,18.52,73.85,Market_Rate,"MoEFCC,CPCB_Auth",9923103197@mail.jiit.ac.in,Priya Sharma
+B076,Green Industries Pvt Ltd,Organic Waste Processor,"agricultural_waste,yard_waste,wood_waste",organic,Clean,20,120,Pune,Maharashtra,18.52,73.85,₹20000-22000/ton,MoEFCC,divyanshsinghnrj@gmail.com,Sneha Gupta
+B077,Metro Processors Pvt Ltd,Electronics Recycler,"pcb_scrap,computer_scrap,hard_drives",electronic,Grade B,1,1001,Pune,Maharashtra,18.52,73.85,₹8000-10000/ton,SPCB_Auth,armangupta1511@gmail.com,Amit Kumar
+B078,Apex Processors Pvt Ltd,Organic Waste Processor,"yard_waste,organic_waste",organic,Grade B,5,1005,Delhi,Delhi,28.61,77.21,Negotiable,"CPCB_Auth,MoEFCC",querry@divyanshsingh.xyz,Amit Gupta
+B079,Urban Solutions Pvt Ltd,Electronics Recycler,"displays_lcd,pcb_scrap",electronic,Grade B,5,505,Kolkata,West Bengal,22.57,88.36,Collection_Fee: ₹700-1200/ton,"MoEFCC,SPCB_Auth,CPCB_Auth",armangupta1511@gmail.com,Neha Iyer
+B080,Hindustan Industries Pvt Ltd,Waste Broker,plastic_packaging,mixed,Mixed,2,202,Pune,Maharashtra,18.52,73.85,₹42-47/kg,CPCB_Auth,querry@divyanshsingh.xyz,Anjali Kumar
+B081,Green Processors Pvt Ltd,General Recycler,rubber_scrap,mixed,As-Is,1,1001,Mumbai,Maharashtra,19.08,72.88,Negotiable,"SPCB_Auth,MoEFCC",9923103197@mail.jiit.ac.in,Priya Kumar
+B082,Royal Solutions Pvt Ltd,Chemical Waste Processor,solvents_contaminated,"chemical,hazardous",As-Is,10,210,Lucknow,Uttar Pradesh,26.85,80.95,Collection_Fee: ₹1700-2200/ton,CPCB_Auth,divyanshsinghnrj@gmail.com,Karthik Verma
+B083,Metro Enterprises Pvt Ltd,Paper & Cardboard Processor,"newsprint,cardboard_boxes,packaging_cardboard",paper,Clean,10,1010,Bengaluru,Karnataka,12.97,77.59,₹20000-22000/ton,"CPCB_Auth,MoEFCC,SPCB_Auth",querry@divyanshsingh.xyz,Amit Sharma
+B084,Urban Industries Pvt Ltd,Chemical Waste Processor,"paint_sludge,used_coolant,chemical_residue","chemical,hazardous",Grade C,5,105,Bengaluru,Karnataka,12.97,77.59,Negotiable,"SPCB_Auth,MoEFCC",armangupta1511@gmail.com,Vikram Verma
+B085,Hindustan Enterprises Pvt Ltd,Paper & Cardboard Processor,"newsprint,office_paper,cardboard_boxes",paper,Grade C,20,120,Bengaluru,Karnataka,12.97,77.59,Negotiable,"MoEFCC,CPCB_Auth,SPCB_Auth",aditya1812khandelia@gmail.com,Sneha Patel
+B086,Royal Processors Pvt Ltd,Children Toys Industry,"pvc_scrap,packaging_plastic",plastic,Mixed,2,1002,Bengaluru,Karnataka,12.97,77.59,₹13000-15000/ton,"MoEFCC,SPCB_Auth",9923103028@mail.jiit.ac.in,Rajesh Gupta
+B087,Bharat Processors Pvt Ltd,General Recycler,"packaging_mixed,rubber_scrap,tire_waste",mixed,Grade B,2,1002,Mumbai,Maharashtra,19.08,72.88,Market_Rate,"MoEFCC,CPCB_Auth,SPCB_Auth",9923103216@mail.jiit.ac.in,Rajesh Gupta
+B088,Bharat Processors Pvt Ltd,General Recycler,"packaging_mixed,tire_waste",mixed,As-Is,2,202,Lucknow,Uttar Pradesh,26.85,80.95,₹15000-17000/ton,MoEFCC,9923103197@mail.jiit.ac.in,Neha Gupta
+B089,Hindustan Traders Pvt Ltd,Hazardous Waste Facility,solvents_contaminated,hazardous,Mixed,10,510,Lucknow,Uttar Pradesh,26.85,80.95,Negotiable,CPCB_Auth,querry@divyanshsingh.xyz,Suresh Gupta
+B090,Hindustan Enterprises Pvt Ltd,General Recycler,"tire_waste,rubber_scrap",mixed,Mixed,20,120,Delhi,Delhi,28.61,77.21,Collection_Fee: ₹1900-2400/ton,MoEFCC,9923103216@mail.jiit.ac.in,Amit Patel
+B091,Royal Enterprises Pvt Ltd,Children Toys Industry,"plastic_film,plastic_packaging",plastic,Clean,10,110,Lucknow,Uttar Pradesh,26.85,80.95,₹74-79/kg,SPCB_Auth,divyanshsinghnrj@gmail.com,Neha Sharma
+B092,Bharat Enterprises Pvt Ltd,Chemical Waste Processor,"chemical_residue,used_oil","chemical,hazardous",As-Is,20,520,Kolkata,West Bengal,22.57,88.36,Market_Rate,MoEFCC,divyanshsinghnrj@gmail.com,Karthik Patel
+B093,Apex Solutions Pvt Ltd,Paper & Cardboard Processor,"office_paper,newsprint,cardboard_boxes",paper,Grade C,5,105,Ahmedabad,Gujarat,23.02,72.57,Negotiable,MoEFCC,armangupta1511@gmail.com,Suresh Verma
+B094,Eco Processors Pvt Ltd,Hazardous Waste Facility,"chemical_residue,solvents_contaminated",hazardous,Grade B,2,102,Hyderabad,Telangana,17.39,78.49,₹33000-35000/ton,"MoEFCC,CPCB_Auth,SPCB_Auth",armangupta1511@gmail.com,Priya Patel
+B095,Tech Traders Pvt Ltd,Paper & Cardboard Processor,"cardboard_boxes,packaging_cardboard",paper,Mixed,10,210,Jaipur,Rajasthan,26.91,75.79,Negotiable,"MoEFCC,SPCB_Auth,CPCB_Auth",9923103028@mail.jiit.ac.in,Vikram Verma
+B096,Re Processors Pvt Ltd,Organic Waste Processor,"agricultural_waste,food_waste,wood_waste",organic,Grade A,10,210,Delhi,Delhi,28.61,77.21,₹9000-11000/ton,"MoEFCC,SPCB_Auth,CPCB_Auth",armangupta1511@gmail.com,Anjali Reddy
+B097,Apex Enterprises Pvt Ltd,Textile Recycler,"thread_waste,textile_waste",textile,Grade B,2,502,Jaipur,Rajasthan,26.91,75.79,Market_Rate,SPCB_Auth,querry@divyanshsingh.xyz,Sneha Reddy
+B098,Eco Traders Pvt Ltd,Chemical Waste Processor,"used_coolant,paint_sludge","chemical,hazardous",Clean,5,205,Hyderabad,Telangana,17.39,78.49,Market_Rate,"CPCB_Auth,MoEFCC,SPCB_Auth",9923103197@mail.jiit.ac.in,Neha Verma
+B099,Urban Processors Pvt Ltd,Construction Waste Processor,mixed_waste,mixed,As-Is,10,110,Chennai,Tamil Nadu,13.08,80.27,₹70-75/kg,CPCB_Auth,aditya1812khandelia@gmail.com,Rajesh Gupta
+B100,Eco Industries Pvt Ltd,Textile Recycler,"thread_waste,carpet_waste,fabric_scraps",textile,Clean,2,102,Kolkata,West Bengal,22.57,88.36,Collection_Fee: ₹1600-2100/ton,"CPCB_Auth,SPCB_Auth,MoEFCC",9923103028@mail.jiit.ac.in,Karthik Sharma

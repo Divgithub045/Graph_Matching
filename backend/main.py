@@ -7,6 +7,11 @@ from datetime import datetime
 import sys
 import os
 import logging
+from dotenv import load_dotenv
+from email_handler_mailersend import EmailAutomationHandler
+
+# Load environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -38,6 +43,14 @@ try:
     logger.info("Services initialized successfully")
 except Exception as e:
     logger.error(f"Error initializing services: {e}")
+
+# Initialize email handler
+try:
+    email_handler = EmailAutomationHandler()
+    logger.info("Email handler initialized successfully")
+except Exception as e:
+    logger.error(f"Error initializing email handler: {e}")
+    email_handler = None
 
 # ============= REQUEST/RESPONSE MODELS =============
 
@@ -295,6 +308,91 @@ async def add_buyer(buyer_data: dict):
     
     except Exception as e:
         logger.error(f"Error in add_buyer: {str(e)}", exc_info=True)
+        raise HTTPException(status_code=400, detail=str(e))
+
+# ============= EMAIL AUTOMATION ENDPOINTS =============
+
+@app.post("/api/send-outreach-emails")
+async def send_outreach_emails(data: dict):
+    """
+    Send initial opportunity emails to selected buyers
+    """
+    try:
+        if not email_handler:
+            return {"success": False, "error": "Email handler not initialized"}
+        
+        buyers = data.get("buyers", [])
+        waste_profile = data.get("waste_profile", {})
+        facility_location = data.get("facility_location", "")
+        facility_industry = data.get("facility_industry", "")
+        
+        results = []
+        success_count = 0
+        
+        for buyer in buyers:
+            try:
+                result = await email_handler.send_initial_opportunity_email(
+                    buyer_email=buyer.get("contact_email", ""),
+                    buyer_name=buyer.get("contact_name", ""),
+                    buyer_company=buyer.get("company", ""),
+                    buyer_id=buyer.get("id", ""),
+                    waste_profile=waste_profile,
+                    match_score=buyer.get("overallScore", 0),
+                    facility_location=facility_location,
+                    facility_industry=facility_industry
+                )
+                results.append(result)
+                if result.get("success"):
+                    success_count += 1
+            except Exception as e:
+                logger.error(f"Error sending email to {buyer.get('contact_email')}: {e}")
+                results.append({"success": False, "error": str(e)})
+        
+        logger.info(f"Sent {success_count}/{len(buyers)} outreach emails successfully")
+        return {
+            "success": success_count > 0,
+            "message": f"Sent {success_count} out of {len(buyers)} emails",
+            "results": results
+        }
+    
+    except Exception as e:
+        logger.error(f"Error in send_outreach_emails: {str(e)}", exc_info=True)
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.post("/api/process-email-response")
+async def process_email_response(data: dict):
+    """
+    Process incoming email response from buyer
+    """
+    try:
+        if not email_handler:
+            return {"success": False, "error": "Email handler not initialized"}
+        
+        buyer_email = data.get("buyer_email", "")
+        email_body = data.get("email_body", "")
+        
+        result = await email_handler.handle_email_response(buyer_email, email_body)
+        
+        return result
+    
+    except Exception as e:
+        logger.error(f"Error in process_email_response: {str(e)}", exc_info=True)
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.get("/api/email-deals")
+async def get_email_deals():
+    """
+    Get all email deals and their statuses
+    """
+    try:
+        if not email_handler:
+            return {"success": False, "error": "Email handler not initialized"}
+        
+        deals = email_handler.get_all_deals()
+        return {"success": True, "deals": deals}
+    
+    except Exception as e:
+        logger.error(f"Error in get_email_deals: {str(e)}", exc_info=True)
         raise HTTPException(status_code=400, detail=str(e))
 
 if __name__ == "__main__":

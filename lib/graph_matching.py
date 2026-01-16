@@ -395,7 +395,7 @@ class GraphMatcher:
                         'materialMatch': round(edge_data['score_breakdown']['material'] * 100, 1),
                         'qualityFit': round(edge_data['score_breakdown']['quality'] * 100, 1),
                         'distance': edge_data['distance_km'],
-                        'costSaving': edge_data['economics']['net_annual_benefit'] / 1000,  # Convert to thousands for display
+                        'costSaving': edge_data['economics']['net_annual_benefit'] / 1000,
                         'environmentalImpact': {
                             'co2Saved': edge_data['environmental']['co2_saved_tons_annual'],
                             'landfillDiverted': edge_data['environmental']['landfill_diverted_tons_annual']
@@ -403,7 +403,10 @@ class GraphMatcher:
                         'compliance': 'Compliant' if edge_data['score_breakdown']['compliance'] > 0.5 else 'Review Required',
                         'overallScore': round(edge_data['total_score'] * 100, 1),
                         'requirements': f"Min {buyer_data.get('min_monthly_volume_tons', 'N/A')} tons/month",
-                        'pricing': buyer_data.get('pricing_model', 'Market dependent')
+                        'pricing': buyer_data.get('pricing_model', 'Market dependent'),
+                        'contact_email': buyer_data.get('contact_email', ''),
+                        'contact_name': buyer_data.get('contact_name', ''),
+                        'buyer_id': buyer_id
                     }
         
         # Convert to list and sort by overall score (descending)

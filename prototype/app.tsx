@@ -38,6 +38,9 @@ interface Match {
   overallScore: number;
   requirements: string;
   pricing: string;
+  contact_email?: string;  // Add this
+  contact_name?: string;   // Add this
+  buyer_id?: string;       // Add this
 }
 
 const WasteCircularPlatform = () => {
@@ -252,7 +255,10 @@ const WasteCircularPlatform = () => {
           compliance: match.compliance || 'Compliant',
           overallScore: match.overallScore || 80,
           requirements: match.requirements || 'Standard waste acceptance',
-          pricing: match.pricing || 'Market dependent'
+          pricing: match.pricing || 'Market dependent',
+          contact_email: match.contact_email,
+          contact_name: match.contact_name,
+          buyer_id: match.buyer_id
         }));
         
         setMatches(processedMatches);
@@ -268,34 +274,95 @@ const WasteCircularPlatform = () => {
   const handleSendOutreach = async () => {
     setLoading(true);
     try {
-      // Save matches to backend
-      const matchResults = matches.map(m => ({
-        id: m.id,
-        company: m.company,
-        type: m.type,
-        materialMatch: m.materialMatch,
-        qualityFit: m.qualityFit,
-        distance: m.distance,
-        costSaving: m.costSaving,
-        environmentalImpact: m.environmentalImpact,
-        compliance: m.compliance,
-        overallScore: m.overallScore
-      }));
+      // Debug: Check what emails we have in matches
+      console.log('Matches with emails:', matches.map(m => ({ 
+        company: m.company, 
+        email: m.contact_email 
+      })));
       
-      const saveResponse = await fetch('http://localhost:8000/api/save-matches', {
+      // Prepare email data with waste profile and buyer information
+      const emailData = {
+        buyers: matches.map(m => ({
+          id: m.buyer_id || `B${String(m.id).padStart(3, '0')}`,
+          company: m.company,
+          contact_email: m.contact_email || '',
+          contact_name: m.contact_name || m.company,
+          overallScore: m.overallScore
+        })),
+        waste_profile: wasteProfile ? {
+          waste_streams: wasteProfile.wasteTypes.map(wt => ({
+            type: wt.type,
+            quantity_min_tons: parseInt(wt.quantity.split('-')[0]) || 0,
+            quantity_max_tons: parseInt(wt.quantity.split('-')[1]) || 0,
+            quality_grade: wt.quality,
+            contamination_pct: parseFloat(wt.contamination) || 0,
+            hazard_class: wt.hazardLevel
+          })),
+          overall_confidence: wasteProfile.confidence
+        } : null,
+        facility_location: operationalData.location,
+        facility_industry: operationalData.industry
+      };
+      
+      // Check if all buyers have emails
+      const missingEmails = emailData.buyers.filter(b => !b.contact_email || b.contact_email === '');
+      if (missingEmails.length > 0) {
+        alert(`Warning: ${missingEmails.length} buyer(s) don't have email addresses. Emails will be sent to buyers with valid emails only.`);
+      }
+      
+      // Filter buyers with valid emails
+      const buyersWithEmails = emailData.buyers.filter(b => b.contact_email && b.contact_email !== '');
+      
+      if (buyersWithEmails.length === 0) {
+        alert('No buyers have email addresses. Cannot send outreach emails.');
+        setLoading(false);
+        return;
+      }
+      
+      // Send outreach emails
+      const emailResponse = await fetch('http://localhost:8000/api/send-outreach-emails', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(matchResults)
+        body: JSON.stringify({
+          ...emailData,
+          buyers: buyersWithEmails
+        })
       });
       
-      if (saveResponse.ok) {
-        await new Promise(resolve => setTimeout(resolve, 500));
+      const emailResult = await emailResponse.json();
+      
+      if (emailResult.success) {
+        // Save matches to backend
+        const matchResults = matches.map(m => ({
+          id: m.id,
+          company: m.company,
+          type: m.type,
+          materialMatch: m.materialMatch,
+          qualityFit: m.qualityFit,
+          distance: m.distance,
+          costSaving: m.costSaving,
+          environmentalImpact: m.environmentalImpact,
+          compliance: m.compliance,
+          overallScore: m.overallScore,
+          contact_email: m.contact_email,
+          contact_name: m.contact_name
+        }));
+        
+        await fetch('http://localhost:8000/api/save-matches', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(matchResults)
+        });
+        
+        alert(`Successfully sent emails to ${buyersWithEmails.length} buyer(s)!`);
         setOutreachSent(true);
         setStep(4);
+      } else {
+        alert('Error sending emails: ' + (emailResult.message || 'Unknown error'));
       }
     } catch (error) {
       console.error('Error sending outreach:', error);
-      alert('Error saving matches. Check console for details.');
+      alert('Error sending outreach emails. Check console for details.');
     }
     setLoading(false);
   };
